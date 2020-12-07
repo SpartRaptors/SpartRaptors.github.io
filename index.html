@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" >
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="canonical" href="/" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<style>
+		/* RESET STYLESHEET */
+		html,body,div,p,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,button,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,a,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;text-decoration:none;}
+		body{line-height:1;}
+		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+		nav ul, ul, li{list-style:none;}
+		img {pointer-events:none;}
+		blockquote,q{quotes:none;}
+		blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+		ins{background-color:#FF9;color:#111;text-decoration:none;}
+		mark{background-color:#FF9;color:#111;font-style:italic;font-weight:bold;}
+		del{text-decoration:line-through;}
+		abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}
+		table{border-collapse:collapse;border-spacing:0;}
+		hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
+		input,select{vertical-align:middle;}
+
+		/* MY CODE */
+		html { scroll-behavior: smooth; }
+		* { width: 100%; color: #D8F3DC; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+		body { user-select: none; }
+		/* FIXED NAV BAR */
+		header {
+			top: 0;
+			position: sticky;
+			padding: 15px 0px;
+			background: #2D6A4F;
+			border-bottom: 2px solid #081C15;
+		}
+		.icon, .hname {
+			font-size: 22px;
+			text-align: center;
+			display: inline-block;
+		}
+		.icon {
+			float: left;
+			padding: 0px 10px;
+			width: fit-content;
+		}
+		.hname { width: 85%; }
+		/* MAIN */
+		main {
+			padding: 20px;
+			background: #F0FFF0;
+		}
+		/* FOOD OF THE DAY */
+		.fotd {
+			width: 100%;
+			padding: 2px;
+			background: #40916C;
+		}
+		.fotd img { display: block; }
+		.fotd h3 { text-align: center; }
+		/* DOTTED LINES */
+		.fill {
+			margin: 40px 0;
+			border-top: 2px dashed #2D6A4F;
+		}
+		/* GRIDS */
+		.grids {
+			display: grid;
+			grid-gap: 20px;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		.cells {
+			height: 80px;
+			display: table;
+		}
+		.cells a {
+			padding: 10px;
+			color: #1B4332;
+			text-align: center;
+			border-radius: 10px;
+			display: table-cell;
+			background: #95D5B2;
+			vertical-align: middle;
+			border: 2px solid #081C15;
+		}
+		/* GRID LAYOUT */
+		.c1, .c5, .c9 {
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+		.c4, .c8 {
+			grid-column-start: 2;
+			grid-column-end: 4;
+		}
+		/* GRID HOVER */
+		.cells a:hover {
+			color: #D8F3DC;
+			background: #2D6A4F;
+		}
+		/* DID YOU KNOW */
+		#dyk {
+			line-height: 24px;
+			padding: 6px 10px;
+			text-align: justify;
+			background-size: contain;
+			background-color: #40916C;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url("https://dl.dropbox.com/s/fuuy4k6e5650qit/DidYouKnow.png?dl=0");
+		}
+		/* FOOTER */
+		footer {
+			line-height: 24px;
+			padding: 11px 15px;
+			background: #2D6A4F;
+			text-align: justify;
+			border-top: 2px solid #081C15;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="icon"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
+		<div class="hname"> PROJECT NAME </div>
+	</header>
+
+	<main>
+		<div class="fotd">
+			<a href="food_of_the_day.html"> <img id="images"> </a>
+			<h3> Food of the Day </h3>
+		</div>
+		<div class="fill"></div>
+		<div class="grids">
+			<div class="cells c1"> <a href="know_and_buy.html"> Know & Buy </a> </div>
+			<div class="cells c2"> <a href="fitness_store.html"> Fitness Store </a> </div>
+			<div class="cells c3"> <a href="compare_and_learn.html"> Compare & Learn </a> </div>
+			<div class="cells c4"> <a href="know_your_culture.html"> Know Your Culture </a> </div>
+			<div class="cells c5"> <a href="heritage.html"> Heritage </a> </div>
+			<div class="cells c6"> <a href="donate_us.html"> Donate Us </a> </div>
+			<div class="cells c7"> <a href="share.html"> Share </a> </div>
+			<div class="cells c8"> <a href="coin_rewards.html"> Coin Rewards </a> </div>
+			<div class="cells c9"> <a href="about_us.html"> About Us </a> </div>
+			<div class="cells c10"> <a href="privacy_policy.html"> Privacy Policy </a> </div>
+		</div>
+		<div class="fill"></div>
+		<div id="dyk"></div>
+	</main>
+	<footer>
+		<div> The sole purpose of this app is to promote traditional Indian foods to the Global buyers </div>
+	</footer>
+	<script>
+		var links = [
+			"https://www.firstmr.com/wp-content/uploads/2017/05/poha-1.jpg",
+			"https://www.firstmr.com/wp-content/uploads/2017/05/semiyapayasam-1.jpg",
+			"https://www.firstmr.com/wp-content/uploads/2017/05/samosa.jpg",
+			"https://www.firstmr.com/wp-content/uploads/2017/05/Murukku.jpg",
+			"https://img.theculturetrip.com/wp-content/uploads/2020/10/vada-pav-india.jpg"
+			];
+		var i = Math.floor(links.length * Math.random());
+		document.getElementById("images").src=links[i];
+		var r_txt = [
+			"When many cultures were only nomadic forest dwellers over 5000 years ago, Indians established Harappan culture in Sindhu Valley (Indus Valley Civilization)",
+			"The name 'India' is derived from the River Indus, the valleys around which were the home of the early settlers\nThe Aryan worshippers referred to the river Indus as the Sindhu",
+			"India is the largest democracy in the world, the 7th largest Country in the world, and one of the most ancient civilizations",
+			"The world's highest cricket ground is in Chail, Himachal Pradesh\nBuilt in 1893 after leveling a hilltop, this cricket pitch is 2444 meters above sea level",
+			"Ayurveda is the earliest school of medicine known to mankind\nThe Father of Medicine, Charaka, consolidated Ayurveda 2500 years ago",
+			"Varanasi, also known as Benaras, was called 'the Ancient City' when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today",
+			"Sikhism originated in the Holy city of Amritsar in Punjab\nFamous for housing the Golden Temple, the city was founded in 1577",
+			"The largest religious building in the world is Angkor Wat, a Hindu Temple in Cambodia built at the end of the 11th century",
+			"The oldest European church and synagogue in India are in the city of Cochin\nThey were built in 1503 and 1568 respectively",
+			"There are 300,000 active mosques in India, more than in any other country, including the Muslim world",
+			"His Holiness, the Dalai Lama, the exiled spiritual leader of Tibetan Buddhists, runs his government in exile from Dharmashala in northern India",
+			"The four religions born in India - Hinduism, Buddhism, Jainism, and Sikhism, are followed by 25% of the world's population",
+			"India provides safety for more than 300,000 refugees originally from Sri Lanka, Tibet, Bhutan, Afghanistan and Bangladesh, who escaped to flee religious and political persecution",
+			"The Baily Bridge is the highest bridge in the world\nIt is located in the Ladakh valley\nIt was built by the Indian Army in August 1982",
+			"Sushruta is regarded as the Father of Surgery. Over 2600 years ago Sushrata & his team conducted complicated surgeries like cataract, artificial limbs, cesareans, fractures, urinary stones, plastic surgery and brain surgeries"
+			];
+		var j = Math.floor(r_txt.length * Math.random());
+		document.getElementById("dyk").innerHTML=r_txt[j];
+	</script>
+</body>
+</html>
