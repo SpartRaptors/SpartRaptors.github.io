@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Know & Buy </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" >
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="canonical" href="/" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<style>
+		/* RESET STYLESHEET */
+		html,body,div,p,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,button,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,a,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;text-decoration:none;}
+		body{line-height:1;}
+		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+		nav ul, ul, li{list-style:none;}
+		img {pointer-events:none;}
+		blockquote,q{quotes:none;}
+		blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+		ins{background-color:#FF9;color:#111;text-decoration:none;}
+		mark{background-color:#FF9;color:#111;font-style:italic;font-weight:bold;}
+		del{text-decoration:line-through;}
+		abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}
+		table{border-collapse:collapse;border-spacing:0;}
+		hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
+		input,select{vertical-align:middle;}
+
+		/* MY CODE */
+		html { scroll-behavior: smooth; }
+		* { width: 100%; color: #D8F3DC; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+		body { user-select: none; background: #1E2736; }
+		/* FIXED NAV BAR */
+		header {
+			top: 0;
+			z-index: 10;
+			position: sticky;
+			padding: 12px 0px;
+			background: #3564B0;
+			border-bottom: 2px solid #081C15;
+		}
+		.icon, .hname {
+			font-size: 28px;
+			display: inline-block;
+		}
+		.icon {
+			top: 0;
+			left: 0;
+			z-index: 10;
+			padding: 0px 10px;
+			position: absolute;
+			width: fit-content;
+		}
+		.hname {
+			position: relative;
+			text-align: center;
+		}
+		/* HEADING */
+		.heading {
+			width: 100%;
+			height: 100px;
+			display: flex;
+			color: #2D6A4F;
+			font-size: 25px;
+			align-items: center;
+			margin: 40px 0 20px 0;
+			justify-content: center;
+			background-color: #F0FFF0;
+			background-image: url("https://dl.dropbox.com/s/i6kwm75bjzuw2jz/c01.png?dl=0");
+		}
+		/* MAIN */
+		main {
+			padding: 20px;
+		}
+		/* GRIDS */
+		.grids {
+			display: grid;
+			grid-gap: 20px;
+			grid-template-columns: 1fr 1fr;
+		}
+		.cells {
+			height: 100px;
+			display: table;
+			border-radius: 10px;
+			background-size: cover;
+			background-color: #F0FFF0;
+		}
+		.cells a {
+			padding: 10px;
+			color: #3564B0;
+			font-size: 20px;
+			text-align: center;
+			border-radius: 10px;
+			display: table-cell;
+			vertical-align: middle;
+			border: 2px solid #FFF;
+		}
+		.cells span {
+			color: #3564B0;
+			font-size: 16px;
+		}
+		/* GRID IMAGES */
+		.c1 {
+			background-image: url("https://dl.dropbox.com/s/9bo0xqbnumr2ytc/c01.png?dl=0");
+		}
+		.c2 {
+			background-image: url("https://dl.dropbox.com/s/gsglonpf2hkf86n/c02.png?dl=0");
+		}
+		.c3 {
+			background-image: url("https://dl.dropbox.com/s/da1c7c7379413s2/c03.png?dl=0");
+		}
+		.c4 {
+			background-image: url("https://dl.dropbox.com/s/5d1s4lav3vybfvn/c04.png?dl=0");
+		}
+		.c5 {
+			background-image: url("https://dl.dropbox.com/s/7xd11r513o0jzbe/c05.png?dl=0");
+		}
+		.c6 {
+			background-image: url("https://dl.dropbox.com/s/bqoi5233i5vcqtf/c06.png?dl=0");
+		}
+		.c7 {
+			background-image: url("https://dl.dropbox.com/s/o38aohhmfq3r8ls/c07.png?dl=0");
+		}
+		.c8 {
+			background-image: url("https://dl.dropbox.com/s/chd31mi8lwty70z/c08.png?dl=0");
+		}
+		.c9 {
+			background-image: url("https://dl.dropbox.com/s/n46cqd4f5gt5vqo/c09.png?dl=0");
+		}
+		.c10 {
+			background-image: url("https://dl.dropbox.com/s/zi01lxdnmjypgny/c10.png?dl=0");
+		}
+		.c11 {
+			background-image: url("https://dl.dropbox.com/s/qm9w1p3qfk4pzk2/c11.png?dl=0");
+		}
+		.c12 {
+			background-image: url("https://dl.dropbox.com/s/0al1t4xbx2aeein/c12.png?dl=0");
+		}
+		.c13 {
+			background-image: url("https://dl.dropbox.com/s/ox8wp3qsrk0q1ff/c13.png?dl=0");
+		}
+		.c14 {
+			background-image: url("https://dl.dropbox.com/s/8fkn15jxg3jniif/c14.png?dl=0");
+		}
+		.c15 {
+			background-image: url("https://dl.dropbox.com/s/fdqu3xhnjiyxn82/c15.png?dl=0");
+		}
+		.c16 {
+			background-image: url("https://dl.dropbox.com/s/z9ulun45e3u9nea/c16.png?dl=0");
+		}
+		.c17 {
+			background-image: url("https://dl.dropbox.com/s/8zhac7jjjt7ysqd/c17.png?dl=0");
+		}
+		.c18 {
+			background-image: url("https://dl.dropbox.com/s/km4bff5ph21p7wa/c18.png?dl=0");
+		}
+		.c19 {
+			background-image: url("https://dl.dropbox.com/s/8r5pxjfmxuguzbz/c19.png?dl=0");
+		}
+		.c20 {
+			background-image: url("https://dl.dropbox.com/s/bat4uz1fbs9y3sz/c20.png?dl=0");
+		}
+		.c21 {
+			background-image: url("https://dl.dropbox.com/s/ouj86eot2yo2ley/c21.png?dl=0");
+		}
+		.c22 {
+			background-image: url("https://dl.dropbox.com/s/yq7a0s2qjj7irds/c22.png?dl=0");
+		}
+		.c23 {
+			background-image: url("https://dl.dropbox.com/s/h9p2l60km3k8ue2/c23.png?dl=0");
+		}
+		.c24 {
+			background-image: url("https://dl.dropbox.com/s/nagdo3f4bm7lvs1/c24.png?dl=0");
+		}
+		.c25 {
+			background-image: url("https://dl.dropbox.com/s/to2idkidxihjp67/c25.png?dl=0");
+		}
+		/* DOTTED LINES */
+		.fill {
+			margin: 20px 0 40px 0;
+			border-top: 2px dashed #2D6A4F;
+		}
+		/* DID YOU KNOW */
+		#dyk {
+			font-size: 18px;
+			line-height: 24px;
+			padding: 14px 20px;
+			text-align: justify;
+			margin-bottom: 40px;
+			background-size: contain;
+			background-color: #40916C;
+			background-position: center;
+			background-repeat: no-repeat;
+			font-family: 'Courgette', cursive;
+			background-image: url("https://dl.dropbox.com/s/up2g2qkapf7p9jy/did_you_know.png?dl=0");
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="hname"> Go LOCAL
+			<div class="icon"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
+		</div>
+	</header>
+	<div class="heading"> KNOW AND BUY </div>
+	<main>
+		<div class="grids">
+			<div class="cells c1"> <a href=""> Ashwagandha </a> </div>
+			<div class="cells c2"> <a href=""> Cumin </a> </div>
+			<div class="cells c3"> <a href=""> Turmeric </a> </div>
+			<div class="cells c4"> <a href=""> Cardamom </a> </div>
+			<div class="cells c5"> <a href=""> Ajwain </a> </div>
+			<div class="cells c6"> <a href=""> Brahmi </a> </div>
+			<div class="cells c7"> <a href=""> Licorice </a> </div>
+			<div class="cells c8"> <a href=""> Manjistha </a> </div>
+			<div class="cells c9"> <a href=""> Neem </a> </div>
+			<div class="cells c10"> <a href=""> Shatavari </a> </div>
+			<div class="cells c11"> <a href=""> Triphala </a> </div>
+			<div class="cells c12"> <a href=""> Cloves </a> </div>
+			<div class="cells c13"> <a href=""> Coriander Seeds </a> </div>
+			<div class="cells c14"> <a href=""> Ginger </a> </div>
+			<div class="cells c15"> <a href=""> Kalpasi </a> </div>
+			<div class="cells c16"> <a href=""> Basil </a> </div>
+			<div class="cells c17"> <a href=""> Yellow Myrobalan </a> </div>
+			<div class="cells c18"> <a href=""> Nilavembu <br> <span> (Kalmegh) </span> </a> </div>
+			<div class="cells c19"> <a href=""> Vasambu <br> <span> (Sweet Flag) </span> </a> </div>
+			<div class="cells c20"> <a href=""> Thippili <br> <span> (Long Pepper) </span> </a> </div>
+			<div class="cells c21"> <a href=""> Kollu <br> <span> (Madras Gram) </span> </a> </div>
+			<div class="cells c22"> <a href=""> Kuppaimeni<br> <span> (Indian Acalypha) </span> </a> </div>
+			<div class="cells c23"> <a href=""> Tulsi </a> </div>
+			<div class="cells c24"> <a href=""> Nochi </a> </div>
+			<div class="cells c25"> <a href=""> Thoothuvalai <br> <span> (Climbing Brinjal) </span> </a> </div>
+		</div>
+	</main>
+	<div class="fill"></div>
+	<div id="dyk"></div>
+	<script>
+		var r_txt = [
+			"When many cultures were only nomadic forest dwellers over 5000 years ago, Indians established Harappan culture in Sindhu Valley (Indus Valley Civilization)",
+			"The name 'India' is derived from the River Indus, the valleys around which were the home of the early settlers\nThe Aryan worshippers referred to the river Indus as the Sindhu",
+			"India is the largest democracy in the world, the 7th largest Country in the world, and one of the most ancient civilizations",
+			"The world's highest cricket ground is in Chail, Himachal Pradesh\nBuilt in 1893 after leveling a hilltop, this cricket pitch is 2444 meters above sea level",
+			"Ayurveda is the earliest school of medicine known to mankind\nThe Father of Medicine, Charaka, consolidated Ayurveda 2500 years ago",
+			"Varanasi, also known as Benaras, was called 'the Ancient City' when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today",
+			"Sikhism originated in the Holy city of Amritsar in Punjab\nFamous for housing the Golden Temple, the city was founded in 1577",
+			"The largest religious building in the world is Angkor Wat, a Hindu Temple in Cambodia built at the end of the 11th century",
+			"The oldest European church and synagogue in India are in the city of Cochin\nThey were built in 1503 and 1568 respectively",
+			"There are 300,000 active mosques in India, more than in any other country, including the Muslim world",
+			"His Holiness, the Dalai Lama, the exiled spiritual leader of Tibetan Buddhists, runs his government in exile from Dharmashala in northern India",
+			"The four religions born in India - Hinduism, Buddhism, Jainism, and Sikhism, are followed by 25% of the world's population",
+			"India provides safety for more than 300,000 refugees originally from Sri Lanka, Tibet, Bhutan, Afghanistan and Bangladesh, who escaped to flee religious and political persecution",
+			"The Baily Bridge is the highest bridge in the world\nIt is located in the Ladakh valley\nIt was built by the Indian Army in August 1982",
+			"Sushruta is regarded as the Father of Surgery. Over 2600 years ago Sushrata & his team conducted complicated surgeries like cataract, artificial limbs, cesareans, fractures, urinary stones, plastic surgery and brain surgeries"
+			];
+		var i = Math.floor(r_txt.length * Math.random());
+		document.getElementById("dyk").innerHTML=r_txt[i];
+	</script>
+</body>
+</html>
