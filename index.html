@@ -26,7 +26,6 @@
 		table{border-collapse:collapse;border-spacing:0;}
 		hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
 		input,select{vertical-align:middle;}
-
 		/* MY CODE */
 		html { scroll-behavior: smooth; }
 		* { width: 100%; color: #D8F3DC; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
@@ -36,7 +35,6 @@
 			top: 0;
 			position: sticky;
 			padding: 12px 0px;
-			/*background: #2D6A4F;*/
 			background: #3564b0;
 			border-bottom: 2px solid #081C15;
 		}
@@ -81,8 +79,8 @@
 			height: 100px;
 			display: table;
 			border-radius: 10px;
-			background-color: #F0FFF0;
 			background-size: cover;
+			background-color: #F0FFF0;
 		}
 		.cells a, .cells button {
 			padding: 10px;
@@ -157,7 +155,7 @@
 			<div class="cells c4"> <a href="know_your_culture.html"> Know Your Culture </a> </div>
 			<div class="cells c5"> <a href="heritage.html"> Heritage </a> </div>
 			<div class="cells c6"> <a href="donate_us.html"> Donate Us </a> </div>
-			<div class="cells c7"> <button id="share"> Share </button> </div>
+			<div class="cells c7"> <button id="share" onclick="sendButton()"> Share </button> </div>
 			<div class="cells c8"> <a href="coin_rewards.html"> Coin Rewards </a> </div>
 			<div class="cells c9"> <a href="about_us.html"> About Us </a> </div>
 			<div class="cells c10"> <a href="privacy_policy.html"> Privacy Policy </a> </div>
@@ -211,6 +209,7 @@
     			console.log("Error!");
   			}
 		});
+		function sendButton() { Android.send(); }
 	</script>
 </body>
 </html>
