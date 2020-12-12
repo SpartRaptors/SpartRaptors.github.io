@@ -81,6 +81,10 @@
 			text-decoration: underline;
 		}
 		.h_link:hover { color: #551A8B; }
+		.img {
+			display: block;
+			margin-top: 30px;
+		}
 		.buy_btn {
 			display: flex;
 			margin-top: 15px;
@@ -114,14 +118,19 @@
 			<span class="span"> Testimonials: </span>
 			<p> I took ashwagandha in combination with a few other herbs that support the nervous system during my last year of studies, where I was completing two courses simultaneously, deeply immersed in the student clinic, writing for the blog and in the throws of setting up a new business. To say that things were overwhelming is a bit of an understatement! Fortunately, I believe the herbs I was taking were incredibly supportive. I can speak directly to ashwagandha as I had also taken it as a simple (that is, taken it therapeutically as a single remedy, without blending it with other herbs) for part of that time. This is a great way to get to know a herb. I have to say my overall resilience improved, and despite it being an incredibly challenging year, I felt in control and able to cope. My sleep pattern improved and I was waking feeling refreshed, with enough energy to exercise regularly – even if it were only a power walk around the neighbourhood. It seems to be far less stimulating than the other adaptogens – it gives a very gentle, relaxed energy. I've since turned to ashwagandha on and off, typically in combinations with other adaptogens and nervines, for stress support during periods of intensity as needed. </p>
 			<span class="source"> Source: <a class="h_link" href="https://ascensionkitchen.com/ashwagandha-sleep-tonic/"> Click here </a> </span>
-			<img src="https://dl.dropbox.com/s/ajq13oyfmq9xg6e/20201212_163531.jpeg?dl=0">
+			<img class="img" src="https://dl.dropbox.com/s/ajq13oyfmq9xg6e/20201212_163531.jpeg?dl=0">
 			<p> Support our locals who are working on the agricultural fields throughout day and night to protect our natural foods and herbs. Buy now.</p>
 			<span class="source"> Source: <a class="h_link" href="http://ayurvetresearchfoundation.com/static.php?id=52"> Click here </a> </span>
 			<br><br> <p class="products"> Ashwagandha roots - Rs. 700 <br> Ashwangandha powder - Rs.99 </p>
 		</div>
 		<div class="buy_btn">
-			<button id="buy_button"> BUY NOW </button>
+			<button id="buy_button" onclick="alertFunc()"> BUY NOW </button>
 		</div>
 	</main>
+	<script>
+		function alertFunc() {
+			alert("Thank you for purchasing");
+		}
+	</script>
 </body>
 </html>
