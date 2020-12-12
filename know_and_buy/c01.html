@@ -35,37 +35,67 @@
 		header {
 			top: 0;
 			z-index: 10;
-			padding: 9px;
+			padding: 10px;
 			position: sticky;
 			background: #2D6A4F;
-			border-bottom: 2px solid #081C15;
+			border-bottom: 5px solid #FFF;
 		}
 		.hname {
 			font-size: 20px;
 		}
 		/* MAIN */
-		main { padding: 20px; }
-		.policy {
-			font-size: 16px;
-			line-height: 30px;
+		main { padding: 10px 15px 20px 15px; }
+		.details p {
+			line-height: 24px;
 			text-align: justify;
 		}
-		.policy sub, .policy span, .disclaimer {
+		.vname {
+			margin: 30px 0;
+		}
+		.vname p, .span, .products {
+			font-size: 18px;
+			font-style: italic;
+			text-decoration: underline;
+			font-family: Georgia, serif;
+		}
+		.container {
+			height: 0;
+			position: relative;
+			padding-bottom: 56.25%;
+		}
+		.container iframe {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+		.source {
+			display: block;
+			text-align: right;
 			font-style: italic;
 			font-family: Georgia, serif;
 		}
-		/* DOTTED LINES */
-		.fill {
-			margin: 20px 0 40px 0;
-			border-top: 2px dashed #2D6A4F;
+		.h_link {
+			color: #00E;
+			text-decoration: underline;
 		}
-		/* DISCALIMER */
-		.disclaimer {
-			padding: 14px 20px;
-			text-align: justify;
-			margin-bottom: 40px;
-			background: #40916C;
+		.h_link:hover { color: #551A8B; }
+		.buy_btn {
+			display: flex;
+			margin-top: 15px;
+			align-items: center;
+			justify-content: center;
 		}
+		#buy_button {
+			width: auto;
+			font-size: 24px;
+			padding: 20px 30px;
+			background: #2D6A4F;
+			border-radius: 50px;
+			border: 2px solid #FFF;
+		}
+		#buy_button:hover { background: #3564B0; }
 	</style>
 </head>
 <body>
@@ -73,7 +103,25 @@
 		<div class="hname"> Ashwagandha </div>
 	</header>
 	<main>
-		<div class="policy"> <sub> [Decemeber, 2020] </sub> <br> <span> GoLocal </span> respects the privacy of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our mobile application. Please read this Privacy Policy carefully. <br> We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the “Last updated” date of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates. You will be deemed to have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Privacy Policy by your continued use of the Application after the date such revised Privacy Policy is posted. <br> This Privacy Policy does not apply to the third-party online / mobile store from which you install the Application or make payments, including any in-game virtual items, which may also collect and use data about you. We are not responsible for any of the data collected by any such third party. </div>
+		<div class="details">
+			<p> Ashwagandha (Withania somnifera, fam. Solanaceae) is commonly known as “Indian Winter cherry” or “Indian Ginseng”. It is one of the most important herb of Ayurveda (the traditional system of medicine in India) used for millennia as a Rasayana for its wide ranging health benefits. Ashwagandha is commonly available as a churna, a fine sieved powder that can be mixed with water, ghee (clarified butter) or honey. It enhances the function of the brain and nervous system and improves the memory. It improves the function of the reproductive system promoting a healthy sexual and reproductive balance. Being a powerful adaptogen, it enhances the body's resilience to stress. Ashwagandha improves the body's defence against disease by improving the cell-mediated immunity. </p>
+			<div class="vname">
+				<p> Ashwagandha sleep tonic: </p>
+				<div class="container">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/HM289ghVQvs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<span class="span"> Testimonials: </span>
+			<p> I took ashwagandha in combination with a few other herbs that support the nervous system during my last year of studies, where I was completing two courses simultaneously, deeply immersed in the student clinic, writing for the blog and in the throws of setting up a new business. To say that things were overwhelming is a bit of an understatement! Fortunately, I believe the herbs I was taking were incredibly supportive. I can speak directly to ashwagandha as I had also taken it as a simple (that is, taken it therapeutically as a single remedy, without blending it with other herbs) for part of that time. This is a great way to get to know a herb. I have to say my overall resilience improved, and despite it being an incredibly challenging year, I felt in control and able to cope. My sleep pattern improved and I was waking feeling refreshed, with enough energy to exercise regularly – even if it were only a power walk around the neighbourhood. It seems to be far less stimulating than the other adaptogens – it gives a very gentle, relaxed energy. I've since turned to ashwagandha on and off, typically in combinations with other adaptogens and nervines, for stress support during periods of intensity as needed. </p>
+			<span class="source"> Source: <a class="h_link" href="https://ascensionkitchen.com/ashwagandha-sleep-tonic/"> Click here </a> </span>
+			<img src="https://dl.dropbox.com/s/ajq13oyfmq9xg6e/20201212_163531.jpeg?dl=0">
+			<p> Support our locals who are working on the agricultural fields throughout day and night to protect our natural foods and herbs. Buy now.</p>
+			<span class="source"> Source: <a class="h_link" href="http://ayurvetresearchfoundation.com/static.php?id=52"> Click here </a> </span>
+			<br><br> <p class="products"> Ashwagandha roots - Rs. 700 <br> Ashwangandha powder - Rs.99 </p>
+		</div>
+		<div class="buy_btn">
+			<button id="buy_button"> BUY NOW </button>
+		</div>
 	</main>
 </body>
 </html>
