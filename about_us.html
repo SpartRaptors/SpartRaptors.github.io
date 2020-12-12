@@ -56,7 +56,7 @@
 			text-align: center;
 		}
 		/* HEADING */
-		.heading {
+		#heading {
 			width: 100%;
 			height: 100px;
 			display: flex;
@@ -71,7 +71,7 @@
 		/* MAIN */
 		main { padding: 20px; }
 		/* GRIDS */
-		.grids {
+		#grids {
 			display: grid;
 			grid-gap: 20px;
 			grid-template-columns: 1fr 1fr;
@@ -123,18 +123,8 @@
 		.c23 { background-image: url("know_and_buy/c23.png"); }
 		.c24 { background-image: url("know_and_buy/c24.png"); }
 		.c25 { background-image: url("know_and_buy/c25.png"); }
-		/* IFRAME */
-		iframe {
-			top: 0;
-			margin-top: 54px;
-			left: 0;
-			position: absolute;
-			width: 100%;
-			height: 100vh;
-			border: 5px solid #FFF;
-		}
 		/* DOTTED LINES */
-		.fill {
+		#fill {
 			margin: 20px 0 40px 0;
 			border-top: 2px dashed #2D6A4F;
 		}
@@ -152,6 +142,29 @@
 			font-family: 'Courgette', cursive;
 			background-image: url("index/did_you_know.png");
 		}
+		/* IFRAME */
+		#buy { display: none; }
+		#buy a, #b_iframe {
+			margin-top: 54px;
+			position: absolute;
+		}
+		#buy a {
+			top: 5px;
+			right: 5px;
+			z-index: 5;
+			color: #FFF;
+			width: auto;
+			font-size: 20px;
+			background: #000;
+			padding: 10px 20px;
+		}
+		#b_iframe {
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			border: 5px solid #FFF;
+			height: calc(100vh - 54px);
+		}
 	</style>
 </head>
 <body>
@@ -160,39 +173,42 @@
 			<div class="icon"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
 		</div>
 	</header>
-	<div class="heading"> KNOW AND BUY </div>
+	<div id="heading"> KNOW AND BUY </div>
 	<main>
-		<div class="grids">
-			<div class="cells c1"> <a href=""> Ashwagandha </a> </div>
-			<div class="cells c2"> <a href=""> Cumin </a> </div>
-			<div class="cells c3"> <a href=""> Turmeric </a> </div>
-			<div class="cells c4"> <a href=""> Cardamom </a> </div>
-			<div class="cells c5"> <a href=""> Ajwain </a> </div>
-			<div class="cells c6"> <a href=""> Brahmi </a> </div>
-			<div class="cells c7"> <a href=""> Licorice </a> </div>
-			<div class="cells c8"> <a href=""> Manjistha </a> </div>
-			<div class="cells c9"> <a href=""> Neem </a> </div>
-			<div class="cells c10"> <a href=""> Shatavari </a> </div>
-			<div class="cells c11"> <a href=""> Triphala </a> </div>
-			<div class="cells c12"> <a href=""> Cloves </a> </div>
-			<div class="cells c13"> <a href=""> Coriander Seeds </a> </div>
-			<div class="cells c14"> <a href=""> Ginger </a> </div>
-			<div class="cells c15"> <a href=""> Kalpasi </a> </div>
-			<div class="cells c16"> <a href=""> Basil </a> </div>
-			<div class="cells c17"> <a href=""> Yellow Myrobalan </a> </div>
-			<div class="cells c18"> <a href=""> Nilavembu <br> <span> (Kalmegh) </span> </a> </div>
-			<div class="cells c19"> <a href=""> Vasambu <br> <span> (Sweet Flag) </span> </a> </div>
-			<div class="cells c20"> <a href=""> Thippili <br> <span> (Long Pepper) </span> </a> </div>
-			<div class="cells c21"> <a href=""> Kollu <br> <span> (Madras Gram) </span> </a> </div>
-			<div class="cells c22"> <a href=""> Kuppaimeni<br> <span> (Indian Acalypha) </span> </a> </div>
-			<div class="cells c23"> <a href=""> Tulsi </a> </div>
-			<div class="cells c24"> <a href=""> Nochi </a> </div>
-			<div class="cells c25"> <a href=""> Thoothuvalai <br> <span> (Climbing Brinjal) </span> </a> </div>
+		<div id="grids">
+			<div class="cells c1"> <a onclick="openFunc(0)"> Ashwagandha </a> </div>
+			<div class="cells c2"> <a onclick="openFunc(1)"> Cumin </a> </div>
+			<div class="cells c3"> <a onclick="openFunc(2)"> Turmeric </a> </div>
+			<div class="cells c4"> <a onclick="openFunc(3)"> Cardamom </a> </div>
+			<div class="cells c5"> <a onclick="openFunc(4)"> Ajwain </a> </div>
+			<div class="cells c6"> <a onclick="openFunc(5)"> Brahmi </a> </div>
+			<div class="cells c7"> <a onclick="openFunc(6)"> Licorice </a> </div>
+			<div class="cells c8"> <a onclick="openFunc(7)"> Manjistha </a> </div>
+			<div class="cells c9"> <a onclick="openFunc(8)"> Neem </a> </div>
+			<div class="cells c10"> <a onclick="openFunc(9)"> Shatavari </a> </div>
+			<div class="cells c11"> <a onclick="openFunc(10)"> Triphala </a> </div>
+			<div class="cells c12"> <a onclick="openFunc(11)"> Cloves </a> </div>
+			<div class="cells c13"> <a onclick="openFunc(12)"> Coriander Seeds </a> </div>
+			<div class="cells c14"> <a onclick="openFunc(13)"> Ginger </a> </div>
+			<div class="cells c15"> <a onclick="openFunc(14)"> Kalpasi </a> </div>
+			<div class="cells c16"> <a onclick="openFunc(15)"> Basil </a> </div>
+			<div class="cells c17"> <a onclick="openFunc(16)"> Yellow Myrobalan </a> </div>
+			<div class="cells c18"> <a onclick="openFunc(17)"> Nilavembu <br> <span> (Kalmegh) </span> </a> </div>
+			<div class="cells c19"> <a onclick="openFunc(18)"> Vasambu <br> <span> (Sweet Flag) </span> </a> </div>
+			<div class="cells c20"> <a onclick="openFunc(19)"> Thippili <br> <span> (Long Pepper) </span> </a> </div>
+			<div class="cells c21"> <a onclick="openFunc(20)"> Kollu <br> <span> (Madras Gram) </span> </a> </div>
+			<div class="cells c22"> <a onclick="openFunc(21)"> Kuppaimeni<br> <span> (Indian Acalypha) </span> </a> </div>
+			<div class="cells c23"> <a onclick="openFunc(22)"> Tulsi </a> </div>
+			<div class="cells c24"> <a onclick="openFunc(23)"> Nochi </a> </div>
+			<div class="cells c25"> <a onclick="openFunc(24)"> Thoothuvalai <br> <span> (Climbing Brinjal) </span> </a> </div>
 		</div>
-		<iframe src="https://spartraptors.github.io/" title="Buy Now"></iframe>
 	</main>
-	<div class="fill"></div>
+	<div id="fill"></div>
 	<div id="dyk"></div>
+	<div id="buy">
+		<a href='#' onclick="hideFunc()"> X </a>
+		<iframe id="b_iframe" title="Buy Now"></iframe>
+	</div>
 	<script>
 		var r_txt = [
 			"When many cultures were only nomadic forest dwellers over 5000 years ago, Indians established Harappan culture in Sindhu Valley (Indus Valley Civilization)",
@@ -211,8 +227,32 @@
 			"The Baily Bridge is the highest bridge in the world\nIt is located in the Ladakh valley\nIt was built by the Indian Army in August 1982",
 			"Sushruta is regarded as the Father of Surgery. Over 2600 years ago Sushrata & his team conducted complicated surgeries like cataract, artificial limbs, cesareans, fractures, urinary stones, plastic surgery and brain surgeries"
 			];
-		var i = Math.floor(r_txt.length * Math.random());
-		document.getElementById("dyk").innerHTML=r_txt[i];
+		var j = Math.floor(r_txt.length * Math.random());
+		_e("dyk").innerHTML = r_txt[j];
+		var h_link = [
+			"https://en.m.wikipedia.org/wiki/Ghantapatua",
+			"https://en.m.wikipedia.org/wiki/Madhubani_art",
+			"https://en.m.wikipedia.org/wiki/Rogan_painting",
+			"https://en.m.wikipedia.org/wiki/Dhokra",
+			"https://en.m.wikipedia.org/wiki/Pallanguzhi"
+			];
+		function openFunc(i) {
+			_e("b_iframe").src = h_link[i];
+			_e("buy").style.display = "block";
+			_e("heading").style.display = "none";
+			_e("grids").style.display = "none";
+			_e("fill").style.display = "none";
+			_e("dyk").style.display = "none";
+		}
+		function hideFunc() {
+			_e("b_iframe").src = "";
+			_e("buy").style.display = "none";
+			_e("heading").style.display = "flex";
+			_e("grids").style.display = "grid";
+			_e("fill").style.display = "block";
+			_e("dyk").style.display = "block";
+		}
+		function _e(id) { return document.getElementById(id); }
 	</script>
 </body>
 </html>
