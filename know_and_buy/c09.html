@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Neem </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" >
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="canonical" href="/" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<style>
+		/* RESET STYLESHEET */
+		html,body,div,p,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,button,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,a,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;text-decoration:none;}
+		body{line-height:1;}
+		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+		nav ul, ul, li{list-style:none;}
+		img {pointer-events:none;}
+		blockquote,q{quotes:none;}
+		blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+		ins{background-color:#FF9;color:#111;text-decoration:none;}
+		mark{background-color:#FF9;color:#111;font-style:italic;font-weight:bold;}
+		del{text-decoration:line-through;}
+		abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}
+		table{border-collapse:collapse;border-spacing:0;}
+		hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
+		input,select{vertical-align:middle;}
+		/* MY CODE */
+		html { scroll-behavior: smooth; }
+		* { width: 100%; color: #D8F3DC; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+		body { user-select: none; background: #1E2736; }
+		/* FIXED NAV BAR */
+		header {
+			top: 0;
+			z-index: 10;
+			padding: 15px 0;
+			position: sticky;
+			background: #3564B0;
+			border-bottom: 5px solid #081C15;
+		}
+		.icon, .hname {
+			font-size: 25px;
+			display: inline-block;
+		}
+		.icon {
+			top: 0;
+			left: 0;
+			z-index: 10;
+			padding: 0px 10px;
+			position: absolute;
+			width: fit-content;
+		}
+		.hname {
+			position: relative;
+			text-align: center;
+		}
+		/* MAIN */
+		main { padding: 0 15px; }
+		.section {
+			width: 100%;
+			display: block;
+			margin: 20px 0;
+		}
+		.section img {
+			height: auto;
+			max-width: 100%;
+			margin-bottom: 10px;
+		}
+		.products, .section button, .section a {
+			font-size: 18px;
+			font-style: italic;
+			font-family: Georgia, serif;
+		}
+		.section p {
+			line-height: 24px;
+			text-align: justify;
+		}
+		.section span { display: block; }
+		.section span, .section span a { text-align: right; }
+		.section span a {
+			color: #3564B0;
+			text-decoration: underline;
+		}
+		.section span a:hover { color: red; }
+		/* BUTTONS */
+		.section button, .section .a {
+			width: 100%;
+			padding: 15px;
+			display: block;
+			background: #2D6A4F;
+			border: 2px solid #F0FFF0;
+		}
+		.section button:hover, .section .a:hover { background: #3564B0; }
+		.section button {
+			margin-bottom: 20px;
+		}
+		/* HIDDEN DIVS */
+		#section4, #section5, #section6 {
+			display: none;
+			margin-top: 15px;
+			line-height: 24px;
+			text-align: justify;
+		}
+		/* DOTTED LINES */
+		.fill {
+			margin-bottom: 20px;
+			border-top: 2px dashed #2D6A4F;
+		}
+	</style>
+</head>
+<body id='target'>
+	<header>
+		<div class="hname"> Neem
+			<div class="icon"> <a href="../know_and_buy.html"> <i class="fas fa-chevron-circle-left"></i> </a> </div>
+		</div>
+	</header>
+	<main>
+		<div class="section">
+			<img src="c09.jpeg">
+			<p class="products"> Neem leaves - Rs. 25 </p>
+		</div>
+		<div class="section">
+			<button onclick="alertFunc()"> Add to Cart </button>
+			<button onclick="alertFunc()"> Buy Now </button>
+		</div>
+		<div class="fill"></div>
+		<div class="section">
+			<img src="c09.jpg"/>
+			<p> Support our locals who are working on the agricultural fields throughout day and night to protect our natural foods and herbs. Buy now. </p>
+		</div>
+		<div class="section">
+			<a class="a" onclick="section('section4')"> Product Description </a>
+			<div id="section4"> The Neem tree (Azadirachta indica A. Juss) was probably India’s best kept secret! Ancient India was envied for its Black Pepper, Cardamom, Saffron, Turmeric, Sandalwood, Silk etc. and these prized ingredients were sought after and taken across the seas to Europe for centuries. The British Raj also failed to grasp the significance of the presence of this tree in every nook and corner of India (barring the Himalayas and the coastal regions). Perhaps, if they had known about the wonderful array of uses of the Neem Tree, it would have become a worldwide phenomenon ages ago. For Indians, the Neem tree had many fascinating aspects. For the children this evergreen, attractive tree was a haven from sun and rain – they spent hours in its cooling shade, plucked the sweet ripe fruit for a snack and built tree houses, which they shared with butterflies, birds and bees. This tree was the chosen one because its shade is known to be cooler than any other tree’s, and also, no bugs or insects are to be found under it because of its repellent action. For the women, the neem was the mainstay of the herbal beauty tradition. It was also a source of medicine to treat more than 100 health problems, from scratches and skin rashes to malaria and diabetes. The women also used it to protect their stored grains and pulses through the year. </div>
+		</div>
+		<div class="section">
+			<a class="a" onclick="section('section5')"> Neem Benefits </a>
+			<div id="section5">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/X6GBCuHmByM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="section">
+			<a class="a" onclick="section('section6')"> Testimonials </a>
+			<div id="section6">
+				Neem oil is a common pest repellent, effective against sand fleas and mosquitoes. Other forms of neem can help control termites and repel moths. Some manufacturers add neem to animal shampoos to repel ticks and fleas. They may also add it to cattle feed or grain to repel pests and parasites. Neem is a strong antioxidant, neutralizing free radicals that may influence the development of some conditions. It is also a strong anti-inflammatory agent. Neem has antimicrobial effects and may be effective against several types of bacteria, viruses, and fungi.
+				<span> Source: <a href="https://www.medicalnewstoday.com/articles/325048"> Click here </a> </span>
+			</div>
+		</div>
+	</main>
+	<script>
+		function section(s) {
+			a = check(s);
+			_e(s).style.display = a;
+		}
+		function check(s2) {
+			if(_e(s2).style.display === "block") { return "none"; }
+			else { return "block"; }
+		}
+		function alertFunc() { alert("Item added to cart. Thank you for shopping"); }
+		function _e(id) { return document.getElementById(id); }
+	</script>
+</body>
+</html>
