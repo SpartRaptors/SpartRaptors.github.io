@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Turmeric </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" >
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="canonical" href="/" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<style>
+		/* RESET STYLESHEET */
+		html,body,div,p,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,button,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,a,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;text-decoration:none;}
+		body{line-height:1;}
+		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+		nav ul, ul, li{list-style:none;}
+		img {pointer-events:none;}
+		blockquote,q{quotes:none;}
+		blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+		ins{background-color:#FF9;color:#111;text-decoration:none;}
+		mark{background-color:#FF9;color:#111;font-style:italic;font-weight:bold;}
+		del{text-decoration:line-through;}
+		abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}
+		table{border-collapse:collapse;border-spacing:0;}
+		hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
+		input,select{vertical-align:middle;}
+		/* MY CODE */
+		html { scroll-behavior: smooth; }
+		* { width: 100%; color: #D8F3DC; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+		body { user-select: none; background: #1E2736; }
+		/* FIXED NAV BAR */
+		header {
+			top: 0;
+			z-index: 10;
+			padding: 15px 0;
+			position: sticky;
+			background: #3564B0;
+			border-bottom: 5px solid #081C15;
+		}
+		.icon, .hname {
+			font-size: 25px;
+			display: inline-block;
+		}
+		.icon {
+			top: 0;
+			left: 0;
+			z-index: 10;
+			padding: 0px 10px;
+			position: absolute;
+			width: fit-content;
+		}
+		.hname {
+			position: relative;
+			text-align: center;
+		}
+		/* MAIN */
+		main { padding: 0 15px; }
+		.section {
+			width: 100%;
+			display: block;
+			margin: 20px 0;
+		}
+		.section img {
+			height: auto;
+			max-width: 100%;
+			margin-bottom: 10px;
+		}
+		.products, .section button, .section a {
+			font-size: 18px;
+			font-style: italic;
+			font-family: Georgia, serif;
+		}
+		.section p {
+			line-height: 24px;
+			text-align: justify;
+		}
+		.section span { display: block; }
+		.section span, .section span a { text-align: right; }
+		.section span a {
+			color: #3564B0;
+			text-decoration: underline;
+		}
+		.section span a:hover { color: red; }
+		/* BUTTONS */
+		.section button, .section .a {
+			width: 100%;
+			padding: 15px;
+			display: block;
+			background: #2D6A4F;
+			border: 2px solid #F0FFF0;
+		}
+		.section button:hover, .section .a:hover { background: #3564B0; }
+		.section button {
+			margin-bottom: 20px;
+		}
+		/* HIDDEN DIVS */
+		#section4, #section5, #section6 {
+			display: none;
+			margin-top: 15px;
+			line-height: 24px;
+			text-align: justify;
+		}
+		/* DOTTED LINES */
+		.fill {
+			margin-bottom: 20px;
+			border-top: 2px dashed #2D6A4F;
+		}
+	</style>
+</head>
+<body id='target'>
+	<header>
+		<div class="hname"> Turmeric
+			<div class="icon"> <a href="../know_and_buy.html"> <i class="fas fa-chevron-circle-left"></i> </a> </div>
+		</div>
+	</header>
+	<main>
+		<div class="section">
+			<img src="c03.jpeg">
+			<p class="products"> Turmeric powder - Rs.80/kg </p>
+		</div>
+		<div class="section">
+			<button onclick="alertFunc()"> Add to Cart </button>
+			<button onclick="alertFunc()"> Buy Now </button>
+		</div>
+		<div class="fill"></div>
+		<div class="section">
+			<img src="c03.jpg"/>
+			<p> Support our locals who are working on the agricultural fields throughout day and night to protect our natural foods and herbs. Buy now. </p>
+		</div>
+		<div class="section">
+			<a class="a" onclick="section('section4')"> Product Description </a>
+			<div id="section4"> The use of turmeric dates back nearly 4000 years to the Vedic culture in India, where it was used as a culinary spice and had some religious significance. It probably reached China by 700ad, East Africa by 800ad, West Africa by 1200ad, and Jamaica in the eighteenth century. In 1280, Marco Polo described this spice, marveling at a vegetable that exhibited qualities so similar to that of saffron. According to Sanskrit medical treatises and Ayurvedic and Unani systems, turmeric has a long history of medicinal use in South Asia. Susruta’s Ayurvedic Compendium, dating back to 250bc, recommends an ointment containing turmeric to relieve the effects of poisoned food. Turmeric is used as an herbal medicine for rheumatoid arthritis, chronic anterior uveitis, conjunctivitis, skin cancer, small pox, chicken pox, wound healing, urinary tract infections, and liver ailments. It is also used for digestive disorders; to reduce flatus, jaundice, menstrual difficulties, and colic; for abdominal pain and distension; and for dyspeptic conditions including loss of appetite, postprandial feelings of fullness, and liver and gallbladder complaints. It has anti-inflammatory, choleretic, antimicrobial, and carminative actions (. The main clinical targets of turmeric are the digestive organs: in the intestine, for treatment of diseases such as familial adenomatous polyposis; in the bowels, for treatment of inflammatory bowel disease; and in the colon, for treatment of colon cancer. For arthritis, dosages of 8–60g of fresh turmeric root three times daily have been recommended. </div>
+		</div>
+		<div class="section">
+			<a class="a" onclick="section('section5')"> Turmeric Milk (Golden Milk) </a>
+			<div id="section5">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/qDvGBHuTswA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="section">
+			<a class="a" onclick="section('section6')"> Testimonials </a>
+			<div id="section6">
+				Golden milk may be surging in popularity today, but it’s not a new-fangled idea at all. Turmeric has roots in Ayurvedic medicine that date back nearly 4000 years, I learned after doing some digging around. It is known to reduce inflammation and promote healthy immune system function. And curcumin, the active ingredient in turmeric, has been shown to provide effective and safe mood stabilization. In India, turmeric milk (called haldi doodh in Hindi) has been enjoyed for centuries. I adopted the recipe for myself, making it into a ritual: I’d stand over the stove, pour the coconut milk into a pot and stir it until it bubbled. Then, I’d add the turmeric and honey, and then pour the steaming drink into a mug. This whole process became a relaxing part of my evenings. I even started to look forward to it. In the hour or two after drinking my turmeric and coconut milk concoction each night, I felt a sustained feeling of relaxation. My body, so tight with stress, would become loose as I moved from tension to calm. The thoughts in my mind that were frantic and uncomfortable would slow, and I found that I was able to be where I was. After a few weeks I realized I was having some surprise benefits that I associated with the golden milk. My digestion became regular and I had less bloating after eating. My skin was clearer, my eyes brighter. After 30 days of drinking golden milk, I was in a very different state of mind than I had been at the start of the month. Sure, I knew this drink could not solve my issues with panic and anxiety, but there was no question that I felt calmer and more focused. Since that time, I’ve gone through periods where I don’t drink golden milk very often, but every now and then, when I’m feeling stressed or overwhelmed, I sink right back into the routine of nightly golden milk.
+				<span> Source: <a href="https://whatsgood.vitaminshoppe.com/30-days-turmeric-golden-milk/"> Click here </a> </span>
+			</div>
+		</div>
+	</main>
+	<script>
+		function section(s) {
+			a = check(s);
+			_e(s).style.display = a;
+		}
+		function check(s2) {
+			if(_e(s2).style.display === "block") { return "none"; }
+			else { return "block"; }
+		}
+		function alertFunc() { alert("Item added to cart. Thank you for shopping"); }
+		function _e(id) { return document.getElementById(id); }
+	</script>
+</body>
+</html>
