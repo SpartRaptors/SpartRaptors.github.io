@@ -38,18 +38,19 @@
 			background: #3564b0;
 			border-bottom: 2px solid #081C15;
 		}
-		.icon, .hname {
+		.icon1, .hname, .icon2 {
 			font-size: 28px;
 			display: inline-block;
 		}
-		.icon {
+		.icon1, .icon2 {
 			top: 0;
-			left: 0;
 			z-index: 10;
 			padding: 0px 10px;
 			position: absolute;
 			width: fit-content;
 		}
+		.icon1 { left: 0; }
+		.icon2 { right: 0; }
 		.hname {
 			position: relative;
 			text-align: center;
@@ -141,7 +142,8 @@
 <body>
 	<header>
 		<div class="hname"> Go LOCAL
-			<div class="icon"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
+			<div class="icon1"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
+			<div class="icon2"> <a onclick="logout()"> <i class='fas fa-sign-out-alt'></i> </a> </div>
 		</div>
 	</header>
 	<main>
@@ -198,6 +200,7 @@
 		var j = Math.floor(r_txt.length * Math.random());
 		document.getElementById("dyk").innerHTML=r_txt[j];
 		function sendButton() { Android.send(); }
+		function logout(){ Android.logout(); }
 	</script>
 </body>
 </html>
