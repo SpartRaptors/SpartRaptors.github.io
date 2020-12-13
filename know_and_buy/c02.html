@@ -34,12 +34,27 @@
 		header {
 			top: 0;
 			z-index: 10;
-			padding: 10px;
+			padding: 15px 0;
 			position: sticky;
-			background: #2D6A4F;
-			border-bottom: 5px solid #FFF;
+			background: #3564B0;
+			border-bottom: 5px solid #081C15;
 		}
-		.hname { font-size: 20px; }
+		.icon, .hname {
+			font-size: 25px;
+			display: inline-block;
+		}
+		.icon {
+			top: 0;
+			left: 0;
+			z-index: 10;
+			padding: 0px 10px;
+			position: absolute;
+			width: fit-content;
+		}
+		.hname {
+			position: relative;
+			text-align: center;
+		}
 		/* MAIN */
 		main { padding: 0 15px; }
 		.section {
@@ -96,7 +111,9 @@
 </head>
 <body id='target'>
 	<header>
-		<div class="hname"> Cumin </div>
+		<div class="hname"> Cumin
+			<div class="icon"> <a href="../know_and_buy.html"> <i class="fas fa-chevron-circle-left"></i> </a> </div>
+		</div>
 	</header>
 	<main>
 		<div class="section">
@@ -117,7 +134,7 @@
 			<div id="section4"> Cumin is the dried seed of the herb Cuminum cyminum, a member of the parsley family. The cumin plant grows to 30–50cm (12–20in) tall and is harvested by hand. In India, the seeds are powdered and used in different forms like kashaya (decoction), arishta (fermented decoction), and vati (tablet/pills), and processed with ghee (a semifluid clarified butter). In traditional medicine practices of several countries, dried cumin seeds are believed to have medicinal purposes, although there is no scientific evidence for any use as a drug or medicine. In southern Indian states, a popular drink called jira water is made by boiling cumin seeds. </div>
 		</div>
 		<div class="section">
-			<a class="a" onclick="section('section5')"> Cumin powder </a>
+			<a class="a" onclick="section('section5')"> Cumin Powder </a>
 			<div id="section5">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/Xt5xXjlxKeI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
