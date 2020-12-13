@@ -26,7 +26,6 @@
 		table{border-collapse:collapse;border-spacing:0;}
 		hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
 		input,select{vertical-align:middle;}
-
 		/* MY CODE */
 		html { scroll-behavior: smooth; }
 		* { width: 100%; color: #D8F3DC; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
@@ -40,18 +39,19 @@
 			background: #3564B0;
 			border-bottom: 2px solid #081C15;
 		}
-		.icon, .hname {
+		.icon1, .hname, .icon2 {
 			font-size: 28px;
 			display: inline-block;
 		}
-		.icon {
+		.icon1, .icon2 {
 			top: 0;
-			left: 0;
 			z-index: 10;
 			padding: 0px 10px;
 			position: absolute;
 			width: fit-content;
 		}
+		.icon1 { left: 0; }
+		.icon2 { right: 0; }
 		.hname {
 			position: relative;
 			text-align: center;
@@ -161,44 +161,27 @@
 <body>
 	<header>
 		<div class="hname"> Go LOCAL
-			<div class="icon"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
+			<div class="icon1"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
+			<div class="icon2"> <a onclick="logout()"> <i class="fa fa-user-circle"></i> </a> </div>
 		</div>
 	</header>
 	<div class="heading"> KNOW YOUR CULTURE </div>
 	<main>
 		<div class="button1">
-			<div>
-				<a class="prev" onclick="decreFunc()"> Prev </a>
-				<a class="next" onclick="increFunc()"> Next </a>
-			</div>
+			<div> <a class="prev" onclick="decreFunc()"> Prev </a> <a class="next" onclick="increFunc()"> Next </a> </div>
 		</div>
 		<div>
 			<div id="image"></div>
-			<div class="h_info">
-				<h3 id="h_name"></h3>
-				<p id="h_detail"></p>
-				<span id="hide"> Read more: <a id="h_link"> Wikipedia </a> </span>
-			</div>
+			<div class="h_info"> <h3 id="h_name"></h3> <p id="h_detail"></p> <span id="hide"> Read more: <a id="h_link"> Wikipedia </a> </span> </div>
 		</div>
 		<div class="button2">
-			<div>
-				<a class="prev" onclick="decreFunc()"> Prev </a>
-				<a class="next" onclick="increFunc()"> Next </a>
-			</div>
+			<div> <a class="prev" onclick="decreFunc()"> Prev </a> <a class="next" onclick="increFunc()"> Next </a> </div>
 		</div>
 	</main>
 	<div class="fill"></div>
 	<div id="dyk"></div>
 	<script>
-		var images = [
-			"url('know_your_culture/c01.jpeg')",
-			"url('know_your_culture/c02.jpeg')",
-			"url('know_your_culture/c03.jpeg')",
-			"url('know_your_culture/c04.jpeg')",
-			"url('know_your_culture/c05.jpeg')",
-			"url('know_your_culture/c06.jpeg')",
-			"url('know_your_culture/c07.jpeg')"
-			];
+		var images = [ "url('know_your_culture/c01.jpeg')", "url('know_your_culture/c02.jpeg')", "url('know_your_culture/c03.jpeg')", "url('know_your_culture/c04.jpeg')", "url('know_your_culture/c05.jpeg')", "url('know_your_culture/c06.jpeg')", "url('know_your_culture/c07.jpeg')" ];
 		var h_name = [ "Ghanta Patua", "Mithila Painting (Bihar)", "Rogan Painting", "Traditional Art of Puppetry", "Kumbarike Traditions", "Dhokra Handicraft", "Pallanguzhi" ];
 		var h_detail = [
 			"The Ghanta Patua community of Orissa performs an acrobatic dance during the Hindu month  of Chaitra (March-April). This dance is dedicated to the Mother Goddess who is known by various names like Sarala, Hingula, Charchika, Bhagavati, and Chandi. Ghanta Patua is a non- Brahmin community whose members perform the services meant for the deities. During the auspicious month of Chaitra, the male members of the Ghanta Patua community roam about the villages in a group of 2 or 4. They perform their typical dance balanced on a rope tied between 2 poles, accompanied by music produced by the ‘ghanta’ (brass gong) and ‘dhol’ (drum). <br><br> The main dancer dresses in a female attire, with a black cloth tied on his head and its long flowing ends held by his hands. He places a ‘ghata’ (sacred pitcher), decorated with flowers, vermillion, sandal paste and colored thread, on his head. With the pitcher balanced on his head, he performs a range of Yogic stances. He dances on the rope without any support, exhibiting an extraordinary balancing act. On completion of the dance, he distributes the vermillion paste, which is an offering from the temple, to the people.",
@@ -209,14 +192,7 @@
 			"The Bastar region, a district in Chhattisgar, is home to tribes who specialise in Dhokra handicraft. It’s wax casting technique has been in India for more than 4,000 years. One of the earliest known dhokra artifacts is the dancing girl of Mohenjo-daro. These products are in great demand in domestic and foreign markets because of primitive simplicity, enchanting folk motifs and forceful form. But, again, very few tribes are practicing the art and no one has been able to come up with a technology to save the 250-year-old legacy.",
 			"In Tamilnadu are popular in many parts of South India. The players sit face to face on either side of the board, distribute the beads in equal quantity and commence the game. Four, five, seven or twelve beads are to be put into the pits of the board and the player taking the beads drops one in each of the pits. The player who accumulates more beads would be the winner. In the coastal area this game is played only during the rainy season."
 			];
-		var h_link = [
-			"https://en.m.wikipedia.org/wiki/Ghantapatua",
-			"https://en.m.wikipedia.org/wiki/Madhubani_art",
-			"https://en.m.wikipedia.org/wiki/Rogan_painting",
-			"", "",
-			"https://en.m.wikipedia.org/wiki/Dhokra",
-			"https://en.m.wikipedia.org/wiki/Pallanguzhi"
-			];
+		var h_link = [ "https://en.m.wikipedia.org/wiki/Ghantapatua", "https://en.m.wikipedia.org/wiki/Madhubani_art", "https://en.m.wikipedia.org/wiki/Rogan_painting", "", "", "https://en.m.wikipedia.org/wiki/Dhokra", "https://en.m.wikipedia.org/wiki/Pallanguzhi" ];
 		var i = 0;
 		var n = h_name.length - 1;
 		window.onload = writeFunc();
@@ -236,26 +212,11 @@
 			if(i == 3 || i == 4) { _e("hide").style.display = "none"; }
 			else { _e("hide").style.display = "block"; }
 		}
-		var r_txt = [
-			"When many cultures were only nomadic forest dwellers over 5000 years ago, Indians established Harappan culture in Sindhu Valley (Indus Valley Civilization)",
-			"The name 'India' is derived from the River Indus, the valleys around which were the home of the early settlers\nThe Aryan worshippers referred to the river Indus as the Sindhu",
-			"India is the largest democracy in the world, the 7th largest Country in the world, and one of the most ancient civilizations",
-			"The world's highest cricket ground is in Chail, Himachal Pradesh\nBuilt in 1893 after leveling a hilltop, this cricket pitch is 2444 meters above sea level",
-			"Ayurveda is the earliest school of medicine known to mankind\nThe Father of Medicine, Charaka, consolidated Ayurveda 2500 years ago",
-			"Varanasi, also known as Benaras, was called 'the Ancient City' when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today",
-			"Sikhism originated in the Holy city of Amritsar in Punjab\nFamous for housing the Golden Temple, the city was founded in 1577",
-			"The largest religious building in the world is Angkor Wat, a Hindu Temple in Cambodia built at the end of the 11th century",
-			"The oldest European church and synagogue in India are in the city of Cochin\nThey were built in 1503 and 1568 respectively",
-			"There are 300,000 active mosques in India, more than in any other country, including the Muslim world",
-			"His Holiness, the Dalai Lama, the exiled spiritual leader of Tibetan Buddhists, runs his government in exile from Dharmashala in northern India",
-			"The four religions born in India - Hinduism, Buddhism, Jainism, and Sikhism, are followed by 25% of the world's population",
-			"India provides safety for more than 300,000 refugees originally from Sri Lanka, Tibet, Bhutan, Afghanistan and Bangladesh, who escaped to flee religious and political persecution",
-			"The Baily Bridge is the highest bridge in the world\nIt is located in the Ladakh valley\nIt was built by the Indian Army in August 1982",
-			"Sushruta is regarded as the Father of Surgery. Over 2600 years ago Sushrata & his team conducted complicated surgeries like cataract, artificial limbs, cesareans, fractures, urinary stones, plastic surgery and brain surgeries"
-			];
+		var r_txt = [ "When many cultures were only nomadic forest dwellers over 5000 years ago, Indians established Harappan culture in Sindhu Valley (Indus Valley Civilization).", "The name 'India' is derived from the River Indus, the valleys around which were the home of the early settlers. The Aryan worshippers referred to the river Indus as the Sindhu.", "India is the largest democracy in the world, the 7th largest Country in the world, and one of the most ancient civilizations.", "The world's highest cricket ground is in Chail, Himachal Pradesh. Built in 1893 after leveling a hilltop, this cricket pitch is 2444 meters above sea level.", "Ayurveda is the earliest school of medicine known to mankind. The Father of Medicine, Charaka, consolidated Ayurveda 2500 years ago.", "Varanasi, also known as Benaras, was called 'the Ancient City' when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today.", "Sikhism originated in the Holy city of Amritsar in Punjab. Famous for housing the Golden Temple, the city was founded in 1577.", "The largest religious building in the world is Angkor Wat, a Hindu Temple in Cambodia built at the end of the 11th century.", "The oldest European church and synagogue in India are in the city of Cochin. They were built in 1503 and 1568 respectively.", "There are 300,000 active mosques in India, more than in any other country, including the Muslim world.", "His Holiness, the Dalai Lama, the exiled spiritual leader of Tibetan Buddhists, runs his government in exile from Dharmashala in northern India.", "The four religions born in India - Hinduism, Buddhism, Jainism, and Sikhism, are followed by 25% of the world's population.", "India provides safety for more than 300,000 refugees originally from Sri Lanka, Tibet, Bhutan, Afghanistan and Bangladesh, who escaped to flee religious and political persecution.", "The Baily Bridge is the highest bridge in the world. It is located in the Ladakh valley. It was built by the Indian Army in August 1982.", "Sushruta is regarded as the Father of Surgery. Over 2600 years ago Sushrata & his team conducted complicated surgeries like cataract, artificial limbs, cesareans, fractures, urinary stones, plastic surgery and brain surgeries." ];
 		var j = Math.floor(r_txt.length * Math.random());
 		_e("dyk").innerHTML = r_txt[j];
 		function _e(id) { return document.getElementById(id); }
+		function logout() { Android.logout(); }
 	</script>
 </body>
 </html>
