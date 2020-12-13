@@ -39,18 +39,19 @@
 			background: #3564B0;
 			border-bottom: 2px solid #081C15;
 		}
-		.icon, .hname {
+		.icon1, .hname, .icon2 {
 			font-size: 28px;
 			display: inline-block;
 		}
-		.icon {
+		.icon1, .icon2 {
 			top: 0;
-			left: 0;
 			z-index: 10;
 			padding: 0px 10px;
 			position: absolute;
 			width: fit-content;
 		}
+		.icon1 { left: 0; }
+		.icon2 { right: 0; }
 		.hname {
 			position: relative;
 			text-align: center;
@@ -218,7 +219,8 @@
 <body>
 	<header>
 		<div class="hname"> Go LOCAL
-			<div class="icon"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
+			<div class="icon1"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
+			<div class="icon2"> <a onclick="logout()"> <i class="fa fa-user-circle"></i> </a> </div>
 		</div>
 	</header>
 	<div class="heading"> COMPARE AND LEARN </div>
@@ -228,322 +230,202 @@
 			<div class="sections">
 				<div class="cells c1 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Fresh Fruits </h3>
-						<p> 50 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Fresh Fruits </h3> <p> 50 calories per serving </p> </div>
 				</div>
 				<div class="cells c2 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Full Cream Cheese </h3>
-						<p> 102 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Full Cream Cheese </h3> <p> 102 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c3 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Vegetables </h3>
-						<p> 58 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Vegetables </h3> <p> 58 calories per serving </p> </div>
 				</div>
 				<div class="cells c4 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Mozzarella </h3>
-						<p> 280 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Mozzarella </h3> <p> 280 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c5 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Fresh Vegetable Soup </h3>
-						<p> 32 calories per serving </p>
-					</div>
+					<div class="left content">B<h3> Fresh Vegetable Soup </h3> <p> 32 calories per serving </p> </div>
 				</div>
 				<div class="cells c6 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Potato Fries </h3>
-						<p> 312 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Potato Fries </h3> <p> 312 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c7 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Almonds </h3>
-						<p> 72 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Almonds </h3> <p> 72 calories per serving </p> </div>
 				</div>
 				<div class="cells c8 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Fried Chips </h3>
-						<p> 300 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Fried Chips </h3> <p> 300 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c9 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Salsa </h3>
-						<p> 32 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Salsa </h3> <p> 32 calories per serving </p> </div>
 				</div>
 				<div class="cells c10 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Cheese Burger </h3>
-						<p> 298 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Cheese Burger </h3> <p> 298 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c11 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Dal </h3>
-						<p> 77 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Dal </h3> <p> 77 calories per serving </p> </div>
 				</div>
 				<div class="cells c12 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Samosa </h3>
-						<p> 282 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Samosa </h3> <p> 282 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c13 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Mung Bean Sprouts </h3>
-						<p> 40 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Mung Bean Sprouts </h3> <p> 40 calories per serving </p> </div>
 				</div>
 				<div class="cells c14 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Vada </h3>
-						<p> 97 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Vada </h3> <p> 97 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c15 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Grilled Chicken </h3>
-						<p> 226 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Grilled Chicken </h3> <p> 226 calories per serving </p> </div>
 				</div>
 				<div class="cells c16 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Butter Chicken </h3>
-						<p> 600 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Butter Chicken </h3> <p> 600 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c17 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Phulka </h3>
-						<p> 80 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Phulka </h3> <p> 80 calories per serving </p> </div>
 				</div>
 				<div class="cells c18 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Masala Dosa </h3>
-						<p> 540 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Masala Dosa </h3> <p> 540 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c19 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Ragi Dosa </h3>
-						<p> 154 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Ragi Dosa </h3> <p> 154 calories per serving </p> </div>
 				</div>
 				<div class="cells c20 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Chole Bature </h3>
-						<p> 430 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Chole Bature </h3> <p> 430 calories per serving </p> </div>
 				</div>
 			</div>
 
 			<div class="sections">
 				<div class="cells c21 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Millet (Kambu) Dosa </h3>
-						<p> 97 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Millet (Kambu) Dosa </h3> <p> 97 calories per serving </p> </div>
 				</div>
 				<div class="cells c22 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Paratha </h3>
-						<p> 200 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Paratha </h3> <p> 200 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c23 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Semolina (Rava) Upma </h3>
-						<p> 160 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Semolina (Rava) Upma </h3> <p> 160 calories per serving </p> </div>
 				</div>
 				<div class="cells c24 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Chicken 65 </h3>
-						<p> 270 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Chicken 65 </h3> <p> 270 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c25 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Bread </h3>
-						<p> 230 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Bread </h3> <p> 230 calories per serving </p> </div>
 				</div>
 				<div class="cells c26 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Rice (boiled) </h3>
-						<p> 120 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Rice (boiled) </h3> <p> 120 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c27 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Cornflakes with Milk </h3>
-						<p> 205 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Cornflakes with Milk </h3> <p> 205 calories per serving </p> </div>
 				</div>
 				<div class="cells c28 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Chocolate Biscuit </h3>
-						<p> 520 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Chocolate Biscuit </h3> <p> 520 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c29 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Milk </h3>
-						<p> 75 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Milk </h3> <p> 75 calories per serving </p> </div>
 				</div>
 				<div class="cells c30 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Butter </h3>
-						<p> 740 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Butter </h3> <p> 740 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c31 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Eggs </h3>
-						<p> 150 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Eggs </h3> <p> 150 calories per serving </p> </div>
 				</div>
 				<div class="cells c32 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Wheat Bran </h3>
-						<p> 220 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Wheat Bran </h3> <p> 220 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c33 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Fish </h3>
-						<p> 220 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Fish </h3> <p> 220 calories per serving </p> </div>
 				</div>
 				<div class="cells c34 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Peanuts (roasted) </h3>
-						<p> 570 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Peanuts (roasted) </h3> <p> 570 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c35 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Idli </h3>
-						<p> 100 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Idli </h3> <p> 100 calories per serving </p> </div>
 				</div>
 				<div class="cells c36 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Fried Rice </h3>
-						<p> 260 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Fried Rice </h3> <p> 260 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c37 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Ladoo </h3>
-						<p> 250 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Ladoo </h3> <p> 250 calories per serving </p> </div>
 				</div>
 				<div class="cells c38 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Mysore Pak </h3>
-						<p> 570 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Mysore Pak </h3> <p> 570 calories per serving </p> </div>
 				</div>
 			</div>
 			<div class="sections">
 				<div class="cells c39 lborder">
 					<div class="left mask1"></div> <div class="left mask2"></div> <div class="left mask3"></div> <div class="left mask4"></div>
-					<div class="left content">
-						<h3> Bhel Puri </h3>
-						<p> 280 calories per serving </p>
-					</div>
+					<div class="left content"> <h3> Bhel Puri </h3> <p> 280 calories per serving </p> </div>
 				</div>
 				<div class="cells c40 rborder">
 					<div class="right mask1"></div> <div class="right mask2"></div> <div class="right mask3"></div> <div class="right mask4"></div>
-					<div class="right content">
-						<h3> Pani Puri </h3>
-						<p> 200 calories per serving </p>
-					</div>
+					<div class="right content"> <h3> Pani Puri </h3> <p> 200 calories per serving </p> </div>
 				</div>
 			</div>
 		</div>
@@ -551,25 +433,10 @@
 	<div class="fill"></div>
 	<div id="dyk"></div>
 	<script>
-		var r_txt = [
-			"When many cultures were only nomadic forest dwellers over 5000 years ago, Indians established Harappan culture in Sindhu Valley (Indus Valley Civilization)",
-			"The name 'India' is derived from the River Indus, the valleys around which were the home of the early settlers\nThe Aryan worshippers referred to the river Indus as the Sindhu",
-			"India is the largest democracy in the world, the 7th largest Country in the world, and one of the most ancient civilizations",
-			"The world's highest cricket ground is in Chail, Himachal Pradesh\nBuilt in 1893 after leveling a hilltop, this cricket pitch is 2444 meters above sea level",
-			"Ayurveda is the earliest school of medicine known to mankind\nThe Father of Medicine, Charaka, consolidated Ayurveda 2500 years ago",
-			"Varanasi, also known as Benaras, was called 'the Ancient City' when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today",
-			"Sikhism originated in the Holy city of Amritsar in Punjab\nFamous for housing the Golden Temple, the city was founded in 1577",
-			"The largest religious building in the world is Angkor Wat, a Hindu Temple in Cambodia built at the end of the 11th century",
-			"The oldest European church and synagogue in India are in the city of Cochin\nThey were built in 1503 and 1568 respectively",
-			"There are 300,000 active mosques in India, more than in any other country, including the Muslim world",
-			"His Holiness, the Dalai Lama, the exiled spiritual leader of Tibetan Buddhists, runs his government in exile from Dharmashala in northern India",
-			"The four religions born in India - Hinduism, Buddhism, Jainism, and Sikhism, are followed by 25% of the world's population",
-			"India provides safety for more than 300,000 refugees originally from Sri Lanka, Tibet, Bhutan, Afghanistan and Bangladesh, who escaped to flee religious and political persecution",
-			"The Baily Bridge is the highest bridge in the world\nIt is located in the Ladakh valley\nIt was built by the Indian Army in August 1982",
-			"Sushruta is regarded as the Father of Surgery. Over 2600 years ago Sushrata & his team conducted complicated surgeries like cataract, artificial limbs, cesareans, fractures, urinary stones, plastic surgery and brain surgeries"
-			];
-		var i = Math.floor(r_txt.length * Math.random());
-		document.getElementById("dyk").innerHTML=r_txt[i];
+		var r_txt = [ "When many cultures were only nomadic forest dwellers over 5000 years ago, Indians established Harappan culture in Sindhu Valley (Indus Valley Civilization).", "The name 'India' is derived from the River Indus, the valleys around which were the home of the early settlers. The Aryan worshippers referred to the river Indus as the Sindhu.", "India is the largest democracy in the world, the 7th largest Country in the world, and one of the most ancient civilizations.", "The world's highest cricket ground is in Chail, Himachal Pradesh. Built in 1893 after leveling a hilltop, this cricket pitch is 2444 meters above sea level.", "Ayurveda is the earliest school of medicine known to mankind. The Father of Medicine, Charaka, consolidated Ayurveda 2500 years ago.", "Varanasi, also known as Benaras, was called 'the Ancient City' when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today.", "Sikhism originated in the Holy city of Amritsar in Punjab. Famous for housing the Golden Temple, the city was founded in 1577.", "The largest religious building in the world is Angkor Wat, a Hindu Temple in Cambodia built at the end of the 11th century.", "The oldest European church and synagogue in India are in the city of Cochin. They were built in 1503 and 1568 respectively.", "There are 300,000 active mosques in India, more than in any other country, including the Muslim world.", "His Holiness, the Dalai Lama, the exiled spiritual leader of Tibetan Buddhists, runs his government in exile from Dharmashala in northern India.", "The four religions born in India - Hinduism, Buddhism, Jainism, and Sikhism, are followed by 25% of the world's population.", "India provides safety for more than 300,000 refugees originally from Sri Lanka, Tibet, Bhutan, Afghanistan and Bangladesh, who escaped to flee religious and political persecution.", "The Baily Bridge is the highest bridge in the world. It is located in the Ladakh valley. It was built by the Indian Army in August 1982.", "Sushruta is regarded as the Father of Surgery. Over 2600 years ago Sushrata & his team conducted complicated surgeries like cataract, artificial limbs, cesareans, fractures, urinary stones, plastic surgery and brain surgeries." ];
+		var j = Math.floor(r_txt.length * Math.random());
+		document.getElementById("dyk").innerHTML=r_txt[j];
+		function logout() { Android.logout(); }
 	</script>
 </body>
 </html>
