@@ -39,18 +39,19 @@
 			background: #3564B0;
 			border-bottom: 2px solid #081C15;
 		}
-		.icon, .hname {
+		.icon1, .hname, .icon2 {
 			font-size: 28px;
 			display: inline-block;
 		}
-		.icon {
+		.icon1, .icon2 {
 			top: 0;
-			left: 0;
 			z-index: 10;
 			padding: 0px 10px;
 			position: absolute;
 			width: fit-content;
 		}
+		.icon1 { left: 0; }
+		.icon2 { right: 0; }
 		.hname {
 			position: relative;
 			text-align: center;
@@ -161,78 +162,30 @@
 <body>
 	<header>
 		<div class="hname"> Go LOCAL
-			<div class="icon"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
+			<div class="icon1"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
+			<div class="icon2"> <a onclick="logout()"> <i class="fa fa-user-circle"></i> </a> </div>
 		</div>
 	</header>
 	<div class="heading"> HERITAGE </div>
 	<main>
 		<div class="button1">
-			<div>
-				<a class="prev" onclick="decreFunc()"> Prev </a>
-				<a class="next" onclick="increFunc()"> Next </a>
-			</div>
+			<div> <a class="prev" onclick="decreFunc()"> Prev </a> <a class="next" onclick="increFunc()"> Next </a> </div>
 		</div>
 		<div>
 			<div id="image"></div>
-			<div class="h_info">
-				<h3 id="h_name"></h3>
-				<p id="h_detail"></p>
-				<span> Read more: <a id="h_link"> UNESCO </a> </span>
-			</div>
+			<div class="h_info"> <h3 id="h_name"></h3> <p id="h_detail"></p> <span> Read more: <a id="h_link"> UNESCO </a> </span> </div>
 		</div>
 		<div class="button2">
-			<div>
-				<a class="prev" onclick="decreFunc()"> Prev </a>
-				<a class="next" onclick="increFunc()"> Next </a>
-			</div>
+			<div> <a class="prev" onclick="decreFunc()"> Prev </a> <a class="next" onclick="increFunc()"> Next </a> </div>
 		</div>
 	</main>
 	<div class="fill"></div>
 	<div id="dyk"></div>
 	<script>
-		var images = [
-			"url('heritage/c01.jpeg')",
-			"url('heritage/c02.jpeg')",
-			"url('heritage/c03.jpeg')",
-			"url('heritage/c04.jpeg')",
-			"url('heritage/c05.jpeg')",
-			"url('heritage/c06.jpeg')",
-			"url('heritage/c07.jpeg')",
-			"url('heritage/c08.jpeg')",
-			"url('heritage/c09.jpeg')",
-			"url('heritage/c10.jpeg')",
-			"url('heritage/c11.jpeg')",
-			"url('heritage/c12.jpeg')"
-			];
+		var images = [ "url('heritage/c01.jpeg')", "url('heritage/c02.jpeg')", "url('heritage/c03.jpeg')", "url('heritage/c04.jpeg')", "url('heritage/c05.jpeg')", "url('heritage/c06.jpeg')", "url('heritage/c07.jpeg')", "url('heritage/c08.jpeg')", "url('heritage/c09.jpeg')", "url('heritage/c10.jpeg')", "url('heritage/c11.jpeg')", "url('heritage/c12.jpeg')" ];
 		var h_name = [ "Agra Fort", "Ajanta Caves", "Churches and Convents of Goa", "Great Living Chola Temples", "Group of Monuments at Mahabalipuram", "Jaipur City, Rajasthan", "Red Fort Complex", "Sun Temple, Konârak", "Taj Mahal", "Kaziranga National Park", "Great Himalayan National Park Conservation Area", "Western Ghats" ];
-		var h_detail = [
-			"Near the gardens of the Taj Mahal stands the important 16th-century Mughal monument known as the Red Fort of Agra. This powerful fortress of red sandstone encompasses, within its 2.5-km-long enclosure walls, the imperial city of the Mughal rulers. It comprises many fairy-tale palaces, such as the Jahangir Palace and the Khas Mahal, built by Shah Jahan; audience halls, such as the Diwan-i-Khas; and two very beautiful mosques.",
-			"The first Buddhist cave monuments at Ajanta date from the 2nd and 1st centuries B.C. During the Gupta period (5th and 6th centuries A.D.), many more richly decorated caves were added to the original group. The paintings and sculptures of Ajanta, considered masterpieces of Buddhist religious art, have had a considerable artistic influence.",
-			"The churches and convents of Goa, the former capital of the Portuguese Indies – particularly the Church of Bom Jesus, which contains the tomb of St Francis-Xavier – illustrate the evangelization of Asia. These monuments were influential in spreading forms of Manueline, Mannerist and Baroque art in all the countries of Asia where missions were established.",
-			"The Great Living Chola Temples were built by kings of the Chola Empire, which stretched over all of south India and the neighbouring islands. The site includes three great 11th- and 12th-century Temples: the Brihadisvara Temple at Thanjavur, the Brihadisvara Temple at Gangaikondacholisvaram and the Airavatesvara Temple at Darasuram. The Temple of Gangaikondacholisvaram, built by Rajendra I, was completed in 1035. Its 53-m vimana (sanctum tower) has recessed corners and a graceful upward curving movement, contrasting with the straight and severe tower at Thanjavur. The Airavatesvara temple complex, built by Rajaraja II, at Darasuram features a 24-m vimana and a stone image of Shiva. The temples testify to the brilliant achievements of the Chola in architecture, sculpture, painting and bronze casting.",
-			"This group of sanctuaries, founded by the Pallava kings, was carved out of rock along the Coromandel coast in the 7th and 8th centuries. It is known especially for its rathas (temples in the form of chariots), mandapas (cave sanctuaries), giant open-air reliefs such as the famous 'Descent of the Ganges', and the temple of Rivage, with thousands of sculptures to the glory of Shiva.",
-			"The walled city of Jaipur, in India’s north-western state of Rajasthan was founded in 1727 by Sawai Jai Singh II. Unlike other cities in the region located in hilly terrain, Jaipur was established on the plain and built according to a grid plan interpreted in the light of Vedic architecture. The streets feature continuous colonnaded businesses that intersect in the centre, creating large public squares called chaupars. Markets, shops, residences and temples built along the main streets have uniform facades. The city's urban planning shows an exchange of ideas from ancient Hindu and early modern Mughal as well as Western cultures. The grid plan is a model that prevails in the West, while the organization of the different city sectors (chowkris) refers to traditional Hindu concepts. Designed to be a commercial capital, the city has maintained its local commercial, artisanal and cooperative traditions to this day.",
-			"The Red Fort Complex was built as the palace fort of Shahjahanabad – the new capital of the fifth Mughal Emperor of India, Shah Jahan. Named for its massive enclosing walls of red sandstone, it is adjacent to an older fort, the Salimgarh, built by Islam Shah Suri in 1546, with which it forms the Red Fort Complex. The private apartments consist of a row of pavilions connected by a continuous water channel, known as the Nahr-i-Behisht (Stream of Paradise). The Red Fort is considered to represent the zenith of Mughal creativity which, under the Shah Jahan, was brought to a new level of refinement. The planning of the palace is based on Islamic prototypes, but each pavilion reveals architectural elements typical of Mughal building, reflecting a fusion of Persian, Timurid and Hindu traditions The Red Fort’s innovative planning and architectural style, including the garden design, strongly influenced later buildings and gardens in Rajasthan, Delhi, Agra and further afield.",
-			"On the shores of the Bay of Bengal, bathed in the rays of the rising sun, the temple at Konarak is a monumental representation of the sun god Surya's chariot; its 24 wheels are decorated with symbolic designs and it is led by a team of six horses. Built in the 13th century, it is one of India's most famous Brahman sanctuaries.",
-			"An immense mausoleum of white marble, built in Agra between 1631 and 1648 by order of the Mughal emperor Shah Jahan in memory of his favourite wife, the Taj Mahal is the jewel of Muslim art in India and one of the universally admired masterpieces of the world's heritage.",
-			"In the heart of Assam, this park is one of the last areas in eastern India undisturbed by a human presence. It is inhabited by the world's largest population of one-horned rhinoceroses, as well as many mammals, including tigers, elephants, panthers and bears, and thousands of birds.",
-			"This National Park in the western part of the Himalayan Mountains in the northern Indian state of Himachal Pradesh is characterized by high alpine peaks, alpine meadows and riverine forests. The 90,540 ha property includes the upper mountain glacial and snow meltwater sources of several rivers, and the catchments of water supplies that are vital to millions of downstream users. The GHNPCA protects the monsoon-affected forests and alpine meadows of the Himalayan front ranges. It is part of the Himalaya biodiversity hotspot and includes twenty-five forest types along with a rich assemblage of fauna species, several of which are threatened. This gives the site outstanding significance for biodiversity conservation.",
-			"Older than the Himalaya mountains, the mountain chain of the Western Ghats represents geomorphic features of immense importance with unique biophysical and ecological processes. The site’s high montane forest ecosystems influence the Indian monsoon weather pattern. Moderating the tropical climate of the region, the site presents one of the best examples of the monsoon system on the planet. It also has an exceptionally high level of biological diversity and endemism and is recognized as one of the world’s eight ‘hottest hotspots’ of biological diversity. The forests of the site include some of the best representatives of non-equatorial tropical evergreen forests anywhere and are home to at least 325 globally threatened flora, fauna, bird, amphibian, reptile and fish species."
-			];
-		var h_link = [
-			"https://whc.unesco.org/en/list/251/",
-			"https://whc.unesco.org/en/list/242/",
-			"https://whc.unesco.org/en/list/234/",
-			"https://whc.unesco.org/en/list/250/",
-			"https://whc.unesco.org/en/list/249/",
-			"https://whc.unesco.org/en/list/1605/",
-			"https://whc.unesco.org/en/list/231/",
-			"https://whc.unesco.org/en/list/246/",
-			"https://whc.unesco.org/en/list/252/",
-			"https://whc.unesco.org/en/list/337/",
-			"https://whc.unesco.org/en/list/1406/",
-			"https://whc.unesco.org/en/list/1342/"
-			];
+		var h_detail = [ "Near the gardens of the Taj Mahal stands the important 16th-century Mughal monument known as the Red Fort of Agra. This powerful fortress of red sandstone encompasses, within its 2.5-km-long enclosure walls, the imperial city of the Mughal rulers. It comprises many fairy-tale palaces, such as the Jahangir Palace and the Khas Mahal, built by Shah Jahan; audience halls, such as the Diwan-i-Khas; and two very beautiful mosques.", "The first Buddhist cave monuments at Ajanta date from the 2nd and 1st centuries B.C. During the Gupta period (5th and 6th centuries A.D.), many more richly decorated caves were added to the original group. The paintings and sculptures of Ajanta, considered masterpieces of Buddhist religious art, have had a considerable artistic influence.", "The churches and convents of Goa, the former capital of the Portuguese Indies – particularly the Church of Bom Jesus, which contains the tomb of St Francis-Xavier – illustrate the evangelization of Asia. These monuments were influential in spreading forms of Manueline, Mannerist and Baroque art in all the countries of Asia where missions were established.", "The Great Living Chola Temples were built by kings of the Chola Empire, which stretched over all of south India and the neighbouring islands. The site includes three great 11th- and 12th-century Temples: the Brihadisvara Temple at Thanjavur, the Brihadisvara Temple at Gangaikondacholisvaram and the Airavatesvara Temple at Darasuram. The Temple of Gangaikondacholisvaram, built by Rajendra I, was completed in 1035. Its 53-m vimana (sanctum tower) has recessed corners and a graceful upward curving movement, contrasting with the straight and severe tower at Thanjavur. The Airavatesvara temple complex, built by Rajaraja II, at Darasuram features a 24-m vimana and a stone image of Shiva. The temples testify to the brilliant achievements of the Chola in architecture, sculpture, painting and bronze casting.", "This group of sanctuaries, founded by the Pallava kings, was carved out of rock along the Coromandel coast in the 7th and 8th centuries. It is known especially for its rathas (temples in the form of chariots), mandapas (cave sanctuaries), giant open-air reliefs such as the famous 'Descent of the Ganges', and the temple of Rivage, with thousands of sculptures to the glory of Shiva.", "The walled city of Jaipur, in India’s north-western state of Rajasthan was founded in 1727 by Sawai Jai Singh II. Unlike other cities in the region located in hilly terrain, Jaipur was established on the plain and built according to a grid plan interpreted in the light of Vedic architecture. The streets feature continuous colonnaded businesses that intersect in the centre, creating large public squares called chaupars. Markets, shops, residences and temples built along the main streets have uniform facades. The city's urban planning shows an exchange of ideas from ancient Hindu and early modern Mughal as well as Western cultures. The grid plan is a model that prevails in the West, while the organization of the different city sectors (chowkris) refers to traditional Hindu concepts. Designed to be a commercial capital, the city has maintained its local commercial, artisanal and cooperative traditions to this day.", "The Red Fort Complex was built as the palace fort of Shahjahanabad – the new capital of the fifth Mughal Emperor of India, Shah Jahan. Named for its massive enclosing walls of red sandstone, it is adjacent to an older fort, the Salimgarh, built by Islam Shah Suri in 1546, with which it forms the Red Fort Complex. The private apartments consist of a row of pavilions connected by a continuous water channel, known as the Nahr-i-Behisht (Stream of Paradise). The Red Fort is considered to represent the zenith of Mughal creativity which, under the Shah Jahan, was brought to a new level of refinement. The planning of the palace is based on Islamic prototypes, but each pavilion reveals architectural elements typical of Mughal building, reflecting a fusion of Persian, Timurid and Hindu traditions The Red Fort’s innovative planning and architectural style, including the garden design, strongly influenced later buildings and gardens in Rajasthan, Delhi, Agra and further afield.", "On the shores of the Bay of Bengal, bathed in the rays of the rising sun, the temple at Konarak is a monumental representation of the sun god Surya's chariot; its 24 wheels are decorated with symbolic designs and it is led by a team of six horses. Built in the 13th century, it is one of India's most famous Brahman sanctuaries.", "An immense mausoleum of white marble, built in Agra between 1631 and 1648 by order of the Mughal emperor Shah Jahan in memory of his favourite wife, the Taj Mahal is the jewel of Muslim art in India and one of the universally admired masterpieces of the world's heritage.", "In the heart of Assam, this park is one of the last areas in eastern India undisturbed by a human presence. It is inhabited by the world's largest population of one-horned rhinoceroses, as well as many mammals, including tigers, elephants, panthers and bears, and thousands of birds.", "This National Park in the western part of the Himalayan Mountains in the northern Indian state of Himachal Pradesh is characterized by high alpine peaks, alpine meadows and riverine forests. The 90,540 ha property includes the upper mountain glacial and snow meltwater sources of several rivers, and the catchments of water supplies that are vital to millions of downstream users. The GHNPCA protects the monsoon-affected forests and alpine meadows of the Himalayan front ranges. It is part of the Himalaya biodiversity hotspot and includes twenty-five forest types along with a rich assemblage of fauna species, several of which are threatened. This gives the site outstanding significance for biodiversity conservation.", "Older than the Himalaya mountains, the mountain chain of the Western Ghats represents geomorphic features of immense importance with unique biophysical and ecological processes. The site’s high montane forest ecosystems influence the Indian monsoon weather pattern. Moderating the tropical climate of the region, the site presents one of the best examples of the monsoon system on the planet. It also has an exceptionally high level of biological diversity and endemism and is recognized as one of the world’s eight ‘hottest hotspots’ of biological diversity. The forests of the site include some of the best representatives of non-equatorial tropical evergreen forests anywhere and are home to at least 325 globally threatened flora, fauna, bird, amphibian, reptile and fish species." ];
+		var h_link = [ "https://whc.unesco.org/en/list/251/", "https://whc.unesco.org/en/list/242/", "https://whc.unesco.org/en/list/234/", "https://whc.unesco.org/en/list/250/", "https://whc.unesco.org/en/list/249/", "https://whc.unesco.org/en/list/1605/", "https://whc.unesco.org/en/list/231/", "https://whc.unesco.org/en/list/246/", "https://whc.unesco.org/en/list/252/", "https://whc.unesco.org/en/list/337/", "https://whc.unesco.org/en/list/1406/", "https://whc.unesco.org/en/list/1342/" ];
 		var i = 0;
 		var n = h_name.length - 1;
 		window.onload = writeFunc();
@@ -250,26 +203,11 @@
 			_e("h_detail").innerHTML = h_detail[i];
 			_e("h_link").href = h_link[i];
 		}
-		var r_txt = [
-			"When many cultures were only nomadic forest dwellers over 5000 years ago, Indians established Harappan culture in Sindhu Valley (Indus Valley Civilization)",
-			"The name 'India' is derived from the River Indus, the valleys around which were the home of the early settlers\nThe Aryan worshippers referred to the river Indus as the Sindhu",
-			"India is the largest democracy in the world, the 7th largest Country in the world, and one of the most ancient civilizations",
-			"The world's highest cricket ground is in Chail, Himachal Pradesh\nBuilt in 1893 after leveling a hilltop, this cricket pitch is 2444 meters above sea level",
-			"Ayurveda is the earliest school of medicine known to mankind\nThe Father of Medicine, Charaka, consolidated Ayurveda 2500 years ago",
-			"Varanasi, also known as Benaras, was called 'the Ancient City' when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today",
-			"Sikhism originated in the Holy city of Amritsar in Punjab\nFamous for housing the Golden Temple, the city was founded in 1577",
-			"The largest religious building in the world is Angkor Wat, a Hindu Temple in Cambodia built at the end of the 11th century",
-			"The oldest European church and synagogue in India are in the city of Cochin\nThey were built in 1503 and 1568 respectively",
-			"There are 300,000 active mosques in India, more than in any other country, including the Muslim world",
-			"His Holiness, the Dalai Lama, the exiled spiritual leader of Tibetan Buddhists, runs his government in exile from Dharmashala in northern India",
-			"The four religions born in India - Hinduism, Buddhism, Jainism, and Sikhism, are followed by 25% of the world's population",
-			"India provides safety for more than 300,000 refugees originally from Sri Lanka, Tibet, Bhutan, Afghanistan and Bangladesh, who escaped to flee religious and political persecution",
-			"The Baily Bridge is the highest bridge in the world\nIt is located in the Ladakh valley\nIt was built by the Indian Army in August 1982",
-			"Sushruta is regarded as the Father of Surgery. Over 2600 years ago Sushrata & his team conducted complicated surgeries like cataract, artificial limbs, cesareans, fractures, urinary stones, plastic surgery and brain surgeries"
-			];
+		var r_txt = [ "When many cultures were only nomadic forest dwellers over 5000 years ago, Indians established Harappan culture in Sindhu Valley (Indus Valley Civilization).", "The name 'India' is derived from the River Indus, the valleys around which were the home of the early settlers. The Aryan worshippers referred to the river Indus as the Sindhu.", "India is the largest democracy in the world, the 7th largest Country in the world, and one of the most ancient civilizations.", "The world's highest cricket ground is in Chail, Himachal Pradesh. Built in 1893 after leveling a hilltop, this cricket pitch is 2444 meters above sea level.", "Ayurveda is the earliest school of medicine known to mankind. The Father of Medicine, Charaka, consolidated Ayurveda 2500 years ago.", "Varanasi, also known as Benaras, was called 'the Ancient City' when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today.", "Sikhism originated in the Holy city of Amritsar in Punjab. Famous for housing the Golden Temple, the city was founded in 1577.", "The largest religious building in the world is Angkor Wat, a Hindu Temple in Cambodia built at the end of the 11th century.", "The oldest European church and synagogue in India are in the city of Cochin. They were built in 1503 and 1568 respectively.", "There are 300,000 active mosques in India, more than in any other country, including the Muslim world.", "His Holiness, the Dalai Lama, the exiled spiritual leader of Tibetan Buddhists, runs his government in exile from Dharmashala in northern India.", "The four religions born in India - Hinduism, Buddhism, Jainism, and Sikhism, are followed by 25% of the world's population.", "India provides safety for more than 300,000 refugees originally from Sri Lanka, Tibet, Bhutan, Afghanistan and Bangladesh, who escaped to flee religious and political persecution.", "The Baily Bridge is the highest bridge in the world. It is located in the Ladakh valley. It was built by the Indian Army in August 1982.", "Sushruta is regarded as the Father of Surgery. Over 2600 years ago Sushrata & his team conducted complicated surgeries like cataract, artificial limbs, cesareans, fractures, urinary stones, plastic surgery and brain surgeries." ];
 		var j = Math.floor(r_txt.length * Math.random());
 		_e("dyk").innerHTML = r_txt[j];
 		function _e(id) { return document.getElementById(id); }
+		function logout() { Android.logout(); }
 	</script>
 </body>
 </html>
