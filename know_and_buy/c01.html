@@ -26,7 +26,6 @@
 		table{border-collapse:collapse;border-spacing:0;}
 		hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
 		input,select{vertical-align:middle;}
-
 		/* MY CODE */
 		html { scroll-behavior: smooth; }
 		* { width: 100%; color: #D8F3DC; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
@@ -40,9 +39,7 @@
 			background: #2D6A4F;
 			border-bottom: 5px solid #FFF;
 		}
-		.hname {
-			font-size: 20px;
-		}
+		.hname { font-size: 20px; }
 		/* MAIN */
 		main { padding: 0 15px; }
 		.section {
@@ -64,15 +61,22 @@
 			line-height: 24px;
 			text-align: justify;
 		}
+		.section span { display: block; }
+		.section span, .section span a { text-align: right; }
+		.section span a {
+			color: #3564B0;
+			text-decoration: underline;
+		}
+		.section span a:hover { color: red; }
 		/* BUTTONS */
-		.section button, .section a {
+		.section button, .section .a {
 			width: 100%;
 			padding: 15px;
 			display: block;
 			background: #2D6A4F;
 			border: 2px solid #F0FFF0;
 		}
-		.section button:hover, .section a:hover { background: #3564B0; }
+		.section button:hover, .section .a:hover { background: #3564B0; }
 		.section button {
 			margin-bottom: 20px;
 		}
@@ -90,13 +94,13 @@
 		}
 	</style>
 </head>
-<body>
+<body id='target'>
 	<header>
 		<div class="hname"> Ashwagandha </div>
 	</header>
 	<main>
 		<div class="section">
-			<img src="https://dl.dropbox.com/s/xxyuk9rfv1mqm90/c01.png?dl=0">
+			<img src="c01.jpeg">
 			<p class="products"> Ashwagandha roots - Rs. 700 <br><br> Ashwangandha powder - Rs.99 </p>
 		</div>
 		<div class="section">
@@ -105,22 +109,26 @@
 		</div>
 		<div class="fill"></div>
 		<div class="section">
-			<img src="https://dl.dropbox.com/s/ajq13oyfmq9xg6e/20201212_163531.jpeg?dl=0"/>
+			<img src="c01.jpg"/>
 			<p> Support our locals who are working on the agricultural fields throughout day and night to protect our natural foods and herbs. Buy now. </p>
+				<span> Source: <a href="http://ayurvetresearchfoundation.com/static.php?id=52"> Click here </a> </span>
 		</div>
 		<div class="section">
-			<a onclick="section('section4')"> Product Description </a>
+			<a class="a" onclick="section('section4')"> Product Description </a>
 			<div id="section4"> Ashwagandha (Withania somnifera, fam. Solanaceae) is commonly known as “Indian Winter cherry” or “Indian Ginseng”. It is one of the most important herb of Ayurveda (the traditional system of medicine in India) used for millennia as a Rasayana for its wide ranging health benefits. Ashwagandha is commonly available as a churna, a fine sieved powder that can be mixed with water, ghee (clarified butter) or honey. It enhances the function of the brain and nervous system and improves the memory. It improves the function of the reproductive system promoting a healthy sexual and reproductive balance. Being a powerful adaptogen, it enhances the body's resilience to stress. Ashwagandha improves the body's defence against disease by improving the cell-mediated immunity. </div>
 		</div>
 		<div class="section">
-			<a onclick="section('section5')"> Ashwagandha Sleep Tonic </a>
+			<a class="a" onclick="section('section5')"> Ashwagandha Sleep Tonic </a>
 			<div id="section5">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/HM289ghVQvs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>
 		<div class="section">
-			<a onclick="section('section6')"> Testimonials </a>
-			<div id="section6"> I took ashwagandha in combination with a few other herbs that support the nervous system during my last year of studies, where I was completing two courses simultaneously, deeply immersed in the student clinic, writing for the blog and in the throws of setting up a new business. To say that things were overwhelming is a bit of an understatement! Fortunately, I believe the herbs I was taking were incredibly supportive. I can speak directly to ashwagandha as I had also taken it as a simple (that is, taken it therapeutically as a single remedy, without blending it with other herbs) for part of that time. This is a great way to get to know a herb. I have to say my overall resilience improved, and despite it being an incredibly challenging year, I felt in control and able to cope. My sleep pattern improved and I was waking feeling refreshed, with enough energy to exercise regularly – even if it were only a power walk around the neighbourhood. It seems to be far less stimulating than the other adaptogens – it gives a very gentle, relaxed energy. I've since turned to ashwagandha on and off, typically in combinations with other adaptogens and nervines, for stress support during periods of intensity as needed. </div>
+			<a class="a" onclick="section('section6')"> Testimonials </a>
+			<div id="section6">
+				I took ashwagandha in combination with a few other herbs that support the nervous system during my last year of studies, where I was completing two courses simultaneously, deeply immersed in the student clinic, writing for the blog and in the throws of setting up a new business. To say that things were overwhelming is a bit of an understatement! Fortunately, I believe the herbs I was taking were incredibly supportive. I can speak directly to ashwagandha as I had also taken it as a simple (that is, taken it therapeutically as a single remedy, without blending it with other herbs) for part of that time. This is a great way to get to know a herb. I have to say my overall resilience improved, and despite it being an incredibly challenging year, I felt in control and able to cope. My sleep pattern improved and I was waking feeling refreshed, with enough energy to exercise regularly – even if it were only a power walk around the neighbourhood. It seems to be far less stimulating than the other adaptogens – it gives a very gentle, relaxed energy. I've since turned to ashwagandha on and off, typically in combinations with other adaptogens and nervines, for stress support during periods of intensity as needed.
+				<span> Source: <a href="https://ascensionkitchen.com/ashwagandha-sleep-tonic/"> Click here </a> </span>
+			</div>
 		</div>
 	</main>
 	<script>
