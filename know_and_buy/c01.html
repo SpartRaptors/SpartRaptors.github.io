@@ -34,12 +34,27 @@
 		header {
 			top: 0;
 			z-index: 10;
-			padding: 10px;
+			padding: 15px 0;
 			position: sticky;
-			background: #2D6A4F;
-			border-bottom: 5px solid #FFF;
+			background: #3564B0;
+			border-bottom: 5px solid #081C15;
 		}
-		.hname { font-size: 20px; }
+		.icon, .hname {
+			font-size: 25px;
+			display: inline-block;
+		}
+		.icon {
+			top: 0;
+			left: 0;
+			z-index: 10;
+			padding: 0px 10px;
+			position: absolute;
+			width: fit-content;
+		}
+		.hname {
+			position: relative;
+			text-align: center;
+		}
 		/* MAIN */
 		main { padding: 0 15px; }
 		.section {
@@ -96,7 +111,9 @@
 </head>
 <body id='target'>
 	<header>
-		<div class="hname"> Ashwagandha </div>
+		<div class="hname"> Ashwagandha
+			<div class="icon"> <a href="../know_and_buy.html"> <i class="fas fa-chevron-circle-left"></i> </a> </div>
+		</div>
 	</header>
 	<main>
 		<div class="section">
