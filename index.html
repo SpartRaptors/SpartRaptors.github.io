@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title> Index </title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" >
-	<meta name="format-detection" content="telephone=no" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
 	<link rel="canonical" href="/" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-	<style>
-		/* RESET STYLESHEET */
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Index</title>
+    <style>
+        /* RESET STYLESHEET */
 		html,body,div,p,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,button,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,a,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;text-decoration:none;}
 		body{line-height:1;}
 		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
@@ -26,23 +26,24 @@
 		table{border-collapse:collapse;border-spacing:0;}
 		hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
 		input,select{vertical-align:middle;}
-		/* MY CODE */
-		html { scroll-behavior: smooth; }
-		* { width: 100%; color: #D8F3DC; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-		body { user-select: none; background: #1e2736; }
-		/* FIXED NAV BAR */
-		header {
+
+        /*MY CODE*/
+        html { scroll-behavior: smooth; }
+		* { width: 100%; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+		body { user-select: none; background: linear-gradient(#000428,#004e92); }
+        header {
 			top: 0;
-			position: sticky;
+			position:sticky;
 			padding: 12px 0px;
-			background: #3564b0;
-			border-bottom: 2px solid #081C15;
+            border-bottom: rgba(135,228,176,0.04);
+            color: #fff; 
+           
 		}
-		.icon1, .hname, .icon2 {
-			font-size: 28px;
+        .icon1, .hname, .icon2 {
+			font-size: 25px;
 			display: inline-block;
 		}
-		.icon1, .icon2 {
+        .icon1, .icon2 {
 			top: 0;
 			z-index: 10;
 			padding: 0px 10px;
@@ -51,60 +52,64 @@
 		}
 		.icon1 { left: 0; }
 		.icon2 { right: 0; }
-		.hname {
+        .hname {
 			position: relative;
 			text-align: center;
+            background-color: #3a7bdf;
+            height: 150px;
+           
 		}
-		/* MAIN */
-		main { padding: 40px 20px; }
-		/* FOOD OF THE DAY */
+        h2{
+          padding-top: 20px;
+       }
+       /* FOOD OF THE DAY
 		.fotd {
 			width: 100%;
 			padding: 2px;
-			background: #40916C;
+            height:300px;
+	        background: #3a7bdf;
+            border-radius:100px;
 		}
 		.fotd img { display: block; }
 		.fotd h3 { text-align: center; }
-		/* DOTTED LINES */
-		.fill {
-			margin: 40px 0;
-			border-top: 2px dashed #2D6A4F;
-		}
-		/* GRIDS */
-		.grids {
-			display: grid;
+       */
+       /*Grid*/
+       .grids {
+          display: grid;
 			grid-gap: 20px;
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: 1fr 1fr;
 		}
 		.cells {
-			height: 100px;
+			height: 150px;
 			display: table;
-			border-radius: 10px;
-			background-size: cover;
-			background-color: #F0FFF0;
+			border-radius: 15px;
+			box-shadow: 20px 20px 20px rgba(0,0,0,0.5);
+            background: rgba(255, 255, 255, 0.1);
+            border-top:1px solid rgba(255, 255, 255, 0.5);
+            border-left:1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
+            z-index:100;
+
 		}
-		.cells a, .cells button {
+        .cells a {
 			padding: 10px;
-			height: 100px;
-			color: #3564B0;
+			color: #f2f2f2;
 			text-align: center;
 			border-radius: 10px;
 			display: table-cell;
 			vertical-align: middle;
-			border: 2px solid #F0FFF0;
+			
 		}
-		.cells button { font-size: 16px; }
-		/* GRID LAYOUT */
-		.c1, .c5, .c9 {
-			grid-column-start: 1;
-			grid-column-end: 3;
+		.cells button{
+			padding: 10px;
+			color: #f2f2f2;
+			text-align: center;
+			border-radius: 10px;
+			display: table-cell;
+			vertical-align: middle;
+			height:100px;
 		}
-		.c4, .c8 {
-			grid-column-start: 2;
-			grid-column-end: 4;
-		}
-		.c1, .c4, .c5, .c8, .c9 { font-size: 20px; }
-		.c1 { background-image: url("index/c01.png"); }
+        .c1 { background-image: url("index/c01.png"); }
 		.c2 { background-image: url("index/c02.png"); }
 		.c3 { background-image: url("index/c03.png"); }
 		.c4 { background-image: url("index/c04.png"); }
@@ -114,21 +119,11 @@
 		.c8 { background-image: url("index/c08.png"); }
 		.c9 { background-image: url("index/c09.png"); }
 		.c10 { background-image: url("index/c10.png"); }
-		/* DID YOU KNOW */
-		#dyk {
-			font-size: 18px;
-			line-height: 24px;
-			padding: 6px 10px;
-			text-align: justify;
-			background-size: contain;
-			background-color: #40916C;
-			background-position: center;
-			background-repeat: no-repeat;
-			font-family: 'Courgette', cursive;
-			background-image: url("index/did_you_know.png");
-		}
+        .c1, .c4, .c5, .c8, .c9 { font-size: 15px; }
+        
 		/* FOOTER */
 		.disclaimer {
+            margin-top: 30px;
 			font-size: 20px;
 			font-style: italic;
 			padding: 14px 20px;
@@ -137,40 +132,57 @@
 			font-family: Georgia, serif;
 			border-top: 2px solid #081C15;
 		}
-	</style>
+       
+    </style>
 </head>
 <body>
-	<header>
-		<div class="hname"> Go LOCAL
-			<div class="icon1"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
+    <header>
+        <div class="hname">
+            <h2>GoLocal</h2>
+            <div class="icon1"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
 			<div class="icon2"> <a onclick="logout()"> <i class="fa fa-user-circle"></i> </a> </div>
-		</div>
-	</header>
-	<main>
-		<div class="fotd">
+        </div>
+        <!-- <div class="fotd">
 			<a href="food_of_the_day.html"> <img id="images"> </a>
 			<h3> Food of the Day </h3>
-		</div>
-		<div class="fill"></div>
-		<div class="grids">
+		</div> -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#3a7bd5" fill-opacity="1" d="M0,256L40,234.7C80,213,160,171,240,170.7C320,171,400,213,480,218.7C560,224,640,192,720,186.7C800,181,880,203,960,224C1040,245,1120,267,1200,266.7C1280,267,1360,245,1400,234.7L1440,224L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+        </svg>
+        
+    </header>
+    <main>
+        
+        <div class="grids">
 			<div class="cells c1"> <a href="know_and_buy.html"> Know & Buy </a> </div>
 			<div class="cells c2"> <a href="fitness_store.html"> Fitness Store </a> </div>
 			<div class="cells c3"> <a href="compare_and_learn.html"> Compare & Learn </a> </div>
 			<div class="cells c4"> <a href="know_your_culture.html"> Know Your Culture </a> </div>
 			<div class="cells c5"> <a href="heritage.html"> Heritage </a> </div>
 			<div class="cells c6"> <a href="donate_us.html"> Donate Us </a> </div>
-			<div class="cells c7"> <button onclick="sendButton()"> Share </button> </div>
+			<div class="cells c7"> <button id="share">Share</button></div> 
 			<div class="cells c8"> <a href="coin_rewards.html"> Coin Rewards </a> </div>
 			<div class="cells c9"> <a href="about_us.html"> About Us </a> </div>
 			<div class="cells c10"> <a href="privacy_policy.html"> Privacy Policy </a> </div>
-		</div>
-		<div class="fill"></div>
-		<div id="dyk"></div>
-	</main>
-	<footer>
+        </div>
+        
+    </main>
+    <footer>
 		<div class="disclaimer"> THIS APP IS NOT USED FOR ANY COMMERCIAL / MONETIZATION PURPOSE </div>
 	</footer>
-	<script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".cells"), {
+            max: 25,
+            speed: 400,
+            glare:true,
+            "max-glare":1,
+        });
+        
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".cells"));
+    </script>
+    <script>
 		var links = [ "https://www.firstmr.com/wp-content/uploads/2017/05/poha-1.jpg", "https://www.firstmr.com/wp-content/uploads/2017/05/semiyapayasam-1.jpg", "https://www.firstmr.com/wp-content/uploads/2017/05/samosa.jpg", "https://www.firstmr.com/wp-content/uploads/2017/05/Murukku.jpg", "https://img.theculturetrip.com/wp-content/uploads/2020/10/vada-pav-india.jpg" ];
 		var i = Math.floor(links.length * Math.random());
 		document.getElementById("images").src=links[i];
