@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+	<link rel="canonical" href="/" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Index</title>
+    <style>
+        /* RESET STYLESHEET */
+		html,body,div,p,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,button,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,a,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;text-decoration:none;}
+		body{line-height:1;}
+		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+		nav ul, ul, li{list-style:none;}
+		img {pointer-events:none;}
+		blockquote,q{quotes:none;}
+		blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+		ins{background-color:#FF9;color:#111;text-decoration:none;}
+		mark{background-color:#FF9;color:#111;font-style:italic;font-weight:bold;}
+		del{text-decoration:line-through;}
+		abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}
+		table{border-collapse:collapse;border-spacing:0;}
+		hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
+		input,select{vertical-align:middle;}
+
+        /*MY CODE*/
+        html { scroll-behavior: smooth; }
+		* { width: 100%; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+		body { user-select: none; background: linear-gradient(#000428,#004e92); }
+        header {
+			top: 0;
+			position:sticky;
+			padding: 12px 0px;
+            border-bottom: rgba(135,228,176,0.04);
+            color: #fff; 
+           
+		}
+        .icon1, .hname, .icon2 {
+			font-size: 25px;
+			display: inline-block;
+		}
+        .icon1, .icon2 {
+			top: 0;
+			z-index: 10;
+			padding: 0px 10px;
+			position: absolute;
+			width: fit-content;
+		}
+		.icon1 { left: 0; }
+		.icon2 { right: 0; }
+        .hname {
+			position: relative;
+			text-align: center;
+            background-color: #3a7bdf;
+            height: 150px;
+           
+		}
+        h2{
+          padding-top: 20px;
+       }
+       /* FOOD OF THE DAY
+		.fotd {
+			width: 100%;
+			padding: 2px;
+            height:300px;
+	        background: #3a7bdf;
+            border-radius:100px;
+		}
+		.fotd img { display: block; }
+		.fotd h3 { text-align: center; }
+       */
+       /*Grid*/
+       .grids {
+          display: grid;
+			grid-gap: 20px;
+			grid-template-columns: 1fr 1fr;
+		}
+		.cells {
+			height: 150px;
+			display: table;
+			border-radius: 15px;
+			box-shadow: 20px 20px 20px rgba(0,0,0,0.5);
+            background: rgba(255, 255, 255, 0.1);
+            border-top:1px solid rgba(255, 255, 255, 0.5);
+            border-left:1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
+            z-index:100;
+
+		}
+        .cells a {
+			padding: 10px;
+			color: #f2f2f2;
+			text-align: center;
+			border-radius: 10px;
+			display: table-cell;
+			vertical-align: middle;
+			
+		}
+		.cells button{
+			padding: 10px;
+			color: #f2f2f2;
+			text-align: center;
+			border-radius: 10px;
+			display: table-cell;
+			vertical-align: middle;
+			height:100px;
+		}
+        .c1 { background-image: url("index/c01.png"); }
+		.c2 { background-image: url("index/c02.png"); }
+		.c3 { background-image: url("index/c03.png"); }
+		.c4 { background-image: url("index/c04.png"); }
+		.c5 { background-image: url("index/c05.png"); }
+		.c6 { background-image: url("index/c06.png"); }
+		.c7 { background-image: url("index/c07.png"); }
+		.c8 { background-image: url("index/c08.png"); }
+		.c9 { background-image: url("index/c09.png"); }
+		.c10 { background-image: url("index/c10.png"); }
+        .c1, .c4, .c5, .c8, .c9 { font-size: 15px; }
+        
+		/* FOOTER */
+		.disclaimer {
+            margin-top: 30px;
+			font-size: 20px;
+			font-style: italic;
+			padding: 14px 20px;
+			text-align: justify;
+			background: #3564B0;
+			font-family: Georgia, serif;
+			border-top: 2px solid #081C15;
+		}
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hname">
+            <h2>GoLocal</h2>
+            <div class="icon1"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
+			<div class="icon2"> <a onclick="logout()"> <i class="fa fa-user-circle"></i> </a> </div>
+        </div>
+        <!-- <div class="fotd">
+			<a href="food_of_the_day.html"> <img id="images"> </a>
+			<h3> Food of the Day </h3>
+		</div> -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#3a7bd5" fill-opacity="1" d="M0,256L40,234.7C80,213,160,171,240,170.7C320,171,400,213,480,218.7C560,224,640,192,720,186.7C800,181,880,203,960,224C1040,245,1120,267,1200,266.7C1280,267,1360,245,1400,234.7L1440,224L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+        </svg>
+        
+    </header>
+    <main>
+        
+        <div class="grids">
+			<div class="cells c1"> <a href="know_and_buy.html"> Know & Buy </a> </div>
+			<div class="cells c2"> <a href="fitness_store.html"> Fitness Store </a> </div>
+			<div class="cells c3"> <a href="compare_and_learn.html"> Compare & Learn </a> </div>
+			<div class="cells c4"> <a href="know_your_culture.html"> Know Your Culture </a> </div>
+			<div class="cells c5"> <a href="heritage.html"> Heritage </a> </div>
+			<div class="cells c6"> <a href="donate_us.html"> Donate Us </a> </div>
+			<div class="cells c7"> <button id="share">Share</button></div> 
+			<div class="cells c8"> <a href="coin_rewards.html"> Coin Rewards </a> </div>
+			<div class="cells c9"> <a href="about_us.html"> About Us </a> </div>
+			<div class="cells c10"> <a href="privacy_policy.html"> Privacy Policy </a> </div>
+        </div>
+        
+    </main>
+    <footer>
+		<div class="disclaimer"> THIS APP IS NOT USED FOR ANY COMMERCIAL / MONETIZATION PURPOSE </div>
+	</footer>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".cells"), {
+            max: 25,
+            speed: 400,
+            glare:true,
+            "max-glare":1,
+        });
+        
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".cells"));
+    </script>
+    <script>
+		var links = [ "https://www.firstmr.com/wp-content/uploads/2017/05/poha-1.jpg", "https://www.firstmr.com/wp-content/uploads/2017/05/semiyapayasam-1.jpg", "https://www.firstmr.com/wp-content/uploads/2017/05/samosa.jpg", "https://www.firstmr.com/wp-content/uploads/2017/05/Murukku.jpg", "https://img.theculturetrip.com/wp-content/uploads/2020/10/vada-pav-india.jpg" ];
+		var i = Math.floor(links.length * Math.random());
+		document.getElementById("images").src=links[i];
+		var r_txt = [ "When many cultures were only nomadic forest dwellers over 5000 years ago, Indians established Harappan culture in Sindhu Valley (Indus Valley Civilization).", "The name 'India' is derived from the River Indus, the valleys around which were the home of the early settlers. The Aryan worshippers referred to the river Indus as the Sindhu.", "India is the largest democracy in the world, the 7th largest Country in the world, and one of the most ancient civilizations.", "The world's highest cricket ground is in Chail, Himachal Pradesh. Built in 1893 after leveling a hilltop, this cricket pitch is 2444 meters above sea level.", "Ayurveda is the earliest school of medicine known to mankind. The Father of Medicine, Charaka, consolidated Ayurveda 2500 years ago.", "Varanasi, also known as Benaras, was called 'the Ancient City' when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today.", "Sikhism originated in the Holy city of Amritsar in Punjab. Famous for housing the Golden Temple, the city was founded in 1577.", "The largest religious building in the world is Angkor Wat, a Hindu Temple in Cambodia built at the end of the 11th century.", "The oldest European church and synagogue in India are in the city of Cochin. They were built in 1503 and 1568 respectively.", "There are 300,000 active mosques in India, more than in any other country, including the Muslim world.", "His Holiness, the Dalai Lama, the exiled spiritual leader of Tibetan Buddhists, runs his government in exile from Dharmashala in northern India.", "The four religions born in India - Hinduism, Buddhism, Jainism, and Sikhism, are followed by 25% of the world's population.", "India provides safety for more than 300,000 refugees originally from Sri Lanka, Tibet, Bhutan, Afghanistan and Bangladesh, who escaped to flee religious and political persecution.", "The Baily Bridge is the highest bridge in the world. It is located in the Ladakh valley. It was built by the Indian Army in August 1982.", "Sushruta is regarded as the Father of Surgery. Over 2600 years ago Sushrata & his team conducted complicated surgeries like cataract, artificial limbs, cesareans, fractures, urinary stones, plastic surgery and brain surgeries." ];
+		var j = Math.floor(r_txt.length * Math.random());
+		document.getElementById("dyk").innerHTML=r_txt[j];
+		function sendButton() { Android.send(); }
+		function logout() { Android.logout(); }
+	</script>
+</body>
+</html>
