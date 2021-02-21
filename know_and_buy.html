@@ -28,16 +28,16 @@
 		input,select{vertical-align:middle;}
 		/* MY CODE */
 		html { scroll-behavior: smooth; }
-		* { width: 100%; color: #D8F3DC; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-		body { user-select: none; background: #1E2736; }
+		* { width: 100%; color: #fff5ee; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+		body { user-select: none; background: #fff5ee; }
 		/* FIXED NAV BAR */
 		header {
 			top: 0;
 			z-index: 10;
 			position: sticky;
 			padding: 12px 0px;
-			background: #3564B0;
-			border-bottom: 2px solid #081C15;
+			background: #ff7f58;
+			border-bottom: 2px solid #ff440c;
 		}
 		.icon1, .hname, .icon2 {
 			font-size: 28px;
@@ -57,78 +57,85 @@
 			text-align: center;
 		}
 		/* HEADING */
-		#heading {
+		.heading {
 			width: 100%;
 			height: 100px;
 			display: flex;
-			color: #2D6A4F;
+			color: #ff440c;
 			font-size: 25px;
+			margin-top: 40px;
 			align-items: center;
-			margin: 40px 0 20px 0;
 			justify-content: center;
+			border-radius: 40px 0;
 			background-color: #F0FFF0;
 			background-image: url("headings/c01heading.png");
 		}
 		/* MAIN */
-		main { padding: 20px; }
+		main { padding: 40px 20px; }
 		/* GRIDS */
-		#grids {
+		.grids {
 			display: grid;
 			grid-gap: 20px;
 			grid-template-columns: 1fr 1fr;
 		}
 		.cells {
-			height: 100px;
 			display: table;
 			border-radius: 10px;
+			background: #ffa958;
+			box-shadow: 10px 10px 10px rgba(0,0,0,0.35);
+		}
+		.image {
+			height: 100px;
 			background-size: cover;
-			background-color: #F0FFF0;
+			border-radius: 10px 10px 0 0;
+			border-bottom: 2px solid #ff440c;
 		}
-		.cells a {
+		.product {
+			height: 56px;
+			display: flex;
 			padding: 10px;
-			color: #3564B0;
-			font-size: 20px;
+			font-size: 18px;
 			text-align: center;
-			border-radius: 10px;
-			display: table-cell;
-			vertical-align: middle;
-			border: 2px solid #FFF;
+			align-items: center;
+			justify-content: center;
 		}
-		.cells span {
-			color: #3564B0;
-			font-size: 16px;
+		.view {
+			text-align: center;
+			padding: 0 10px 10px 10px;
+		}
+		.view button {
+			width: 80%;
+			height: 40px;
+			font-size: 18px;
+			line-height: 40px;
+			border-radius: 25px;
+			background-color: #ff440c;
+			box-shadow: 5px 5px 5px rgba(0,0,0,0.35);
+		}
+		.view button a {
+			width: 100%;
+			height: 100%;
+			display: inline-block;
 		}
 		/* GRID IMAGES */
-		.c1 { background-image: url("know_and_buy/c01.png"); }
-		.c2 { background-image: url("know_and_buy/c02.png"); }
-		.c3 { background-image: url("know_and_buy/c03.png"); }
-		.c4 { background-image: url("know_and_buy/c04.png"); }
-		.c5 { background-image: url("know_and_buy/c05.png"); }
-		.c6 { background-image: url("know_and_buy/c06.png"); }
-		.c7 { background-image: url("know_and_buy/c07.png"); }
-		.c8 { background-image: url("know_and_buy/c08.png"); }
-		.c9 { background-image: url("know_and_buy/c09.png"); }
-		.c10 { background-image: url("know_and_buy/c10.png"); }
-		.c11 { background-image: url("know_and_buy/c11.png"); }
-		.c12 { background-image: url("know_and_buy/c12.png"); }
-		.c13 { background-image: url("know_and_buy/c13.png"); }
-		.c14 { background-image: url("know_and_buy/c14.png"); }
-		.c15 { background-image: url("know_and_buy/c15.png"); }
-		.c16 { background-image: url("know_and_buy/c16.png"); }
-		.c17 { background-image: url("know_and_buy/c17.png"); }
-		.c18 { background-image: url("know_and_buy/c18.png"); }
-		.c19 { background-image: url("know_and_buy/c19.png"); }
-		.c20 { background-image: url("know_and_buy/c20.png"); }
-		.c21 { background-image: url("know_and_buy/c21.png"); }
-		.c22 { background-image: url("know_and_buy/c22.png"); }
-		.c23 { background-image: url("know_and_buy/c23.png"); }
-		.c24 { background-image: url("know_and_buy/c24.png"); }
-		.c25 { background-image: url("know_and_buy/c25.png"); }
-		/* DOTTED LINES */
-		#fill {
-			margin: 20px 0 40px 0;
-			border-top: 2px dashed #2D6A4F;
-		}
+		.c1 { background-image: url("know_and_buy/c01.jpeg"); }
+		.c2 { background-image: url("know_and_buy/c02.jpeg"); }
+		.c3 { background-image: url("know_and_buy/c03.jpeg"); }
+		.c4 { background-image: url("know_and_buy/c04.jpeg"); }
+		.c5 { background-image: url("know_and_buy/c05.jpeg"); }
+		.c6 { background-image: url("know_and_buy/c06.jpeg"); }
+		.c7 { background-image: url("know_and_buy/c07.jpeg"); }
+		.c8 { background-image: url("know_and_buy/c08.jpeg"); }
+		.c9 { background-image: url("know_and_buy/c09.jpeg"); }
+		.c10 { background-image: url("know_and_buy/c10.jpeg"); }
+		.c11 { background-image: url("know_and_buy/c11.jpeg"); }
+		.c12 { background-image: url("know_and_buy/c12.jpeg"); }
+		.c13 { background-image: url("know_and_buy/c13.jpeg"); }
+		.c14 { background-image: url("know_and_buy/c14.jpeg"); }
+		.c15 { background-image: url("know_and_buy/c15.jpeg"); }
+		.c16 { background-image: url("know_and_buy/c16.jpeg"); }
+		.c17 { background-image: url("know_and_buy/c17.jpeg"); }
+		.c18 { background-image: url("know_and_buy/c18.jpeg"); }
 		/* DID YOU KNOW */
 		#dyk {
 			font-size: 18px;
@@ -137,7 +144,7 @@
 			text-align: justify;
 			margin-bottom: 40px;
 			background-size: contain;
-			background-color: #40916C;
+			background-color: #ffa958;
 			background-position: center;
 			background-repeat: no-repeat;
 			font-family: 'Courgette', cursive;
@@ -147,42 +154,106 @@
 </head>
 <body>
 	<header>
-		<div class="hname"> Go LOCAL
+		<div class="hname"> GoLocal
 			<div class="icon1"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
 			<div class="icon2"> <a onclick="logout()"> <i class="fa fa-user-circle"></i> </a> </div>
 		</div>
 	</header>
-	<div id="heading"> KNOW AND BUY </div>
+	<div class="heading"> KNOW AND BUY </div>
 	<main>
-		<div id="grids">
-			<div class="cells c1"> <a href="know_and_buy/c01.html"> Ashwagandha </a> </div>
-			<div class="cells c2"> <a href="know_and_buy/c02.html"> Cumin </a> </div>
-			<div class="cells c3"> <a href="know_and_buy/c03.html"> Turmeric </a> </div>
-			<div class="cells c4"> <a href="know_and_buy/c04.html"> Cardamom </a> </div>
-			<div class="cells c5"> <a href="know_and_buy/c05.html"> Ajwain </a> </div>
-			<div class="cells c6"> <a href="know_and_buy/c06.html"> Brahmi </a> </div>
-			<div class="cells c7"> <a href="know_and_buy/c07.html"> Licorice </a> </div>
-			<div class="cells c8"> <a href="know_and_buy/c08.html"> Manjistha </a> </div>
-			<div class="cells c9"> <a href="know_and_buy/c09.html"> Neem </a> </div>
-			<div class="cells c10"> <a href="know_and_buy/c10.html"> Shatavari </a> </div>
-			<div class="cells c11"> <a href="know_and_buy/c11.html"> Triphala </a> </div>
-			<div class="cells c12"> <a href="know_and_buy/c12.html"> Cloves </a> </div>
-			<div class="cells c13"> <a href="know_and_buy/c13.html"> Coriander Seeds </a> </div>
-			<div class="cells c14"> <a href="know_and_buy/c14.html"> Ginger </a> </div>
-			<div class="cells c15"> <a href="know_and_buy/c15.html"> Kalpasi </a> </div>
-			<div class="cells c16"> <a href="know_and_buy/c16.html"> Basil </a> </div>
-			<div class="cells c17"> <a href="know_and_buy/c17.html"> Yellow Myrobalan </a> </div>
-			<div class="cells c18"> <a href="know_and_buy/c18.html"> Nilavembu <br> <span> (Kalmegh) </span> </a> </div>
-			<div class="cells c19"> <a href="know_and_buy/c19.html"> Vasambu <br> <span> (Sweet Flag) </span> </a> </div>
-			<div class="cells c20"> <a href="know_and_buy/c20.html"> Thippili <br> <span> (Long Pepper) </span> </a> </div>
-			<div class="cells c21"> <a href="know_and_buy/c21.html"> Kollu <br> <span> (Madras Gram) </span> </a> </div>
-			<div class="cells c22"> <a href="know_and_buy/c22.html"> Kuppaimeni<br> <span> (Indian Acalypha) </span> </a> </div>
-			<div class="cells c23"> <a href="know_and_buy/c23.html"> Tulsi </a> </div>
-			<div class="cells c24"> <a href="know_and_buy/c24.html"> Nochi </a> </div>
-			<div class="cells c25"> <a href="know_and_buy/c25.html"> Thoothuvalai <br> <span> (Climbing Brinjal) </span> </a> </div>
+		<div class="grids">
+			<div class="cells"> 
+				<div class="image c1"></div>
+				<div class="product"> Ashwagandha </div>
+				<div class="view"> <button> <a href="know_and_buy/c01.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c2"></div>
+				<div class="product"> Cumin </div>
+				<div class="view"> <button> <a href="know_and_buy/c02.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c3"></div>
+				<div class="product"> Turmeric </div>
+				<div class="view"> <button> <a href="know_and_buy/c03.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c4"></div>
+				<div class="product"> Cardamom </div>
+				<div class="view"> <button> <a href="know_and_buy/c04.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c5"></div>
+				<div class="product"> Ajwain </div>
+				<div class="view"> <button> <a href="know_and_buy/c05.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c6"></div>
+				<div class="product"> Brahmi </div>
+				<div class="view"> <button> <a href="know_and_buy/c06.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c7"></div>
+				<div class="product"> Licorice </div>
+				<div class="view"> <button> <a href="know_and_buy/c07.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c8"></div>
+				<div class="product"> Manjistha </div>
+				<div class="view"> <button> <a href="know_and_buy/c08.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c9"></div>
+				<div class="product"> Neem </div>
+				<div class="view"> <button> <a href="know_and_buy/c09.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c10"></div>
+				<div class="product"> Shatavari </div>
+				<div class="view"> <button> <a href="know_and_buy/c10.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c11"></div>
+				<div class="product"> Triphala </div>
+				<div class="view"> <button> <a href="know_and_buy/c11.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c12"></div>
+				<div class="product"> Cloves </div>
+				<div class="view"> <button> <a href="know_and_buy/c12.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c13"></div>
+				<div class="product"> Coriander Seeds </div>
+				<div class="view"> <button> <a href="know_and_buy/c13.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c14"></div>
+				<div class="product"> Ginger </div>
+				<div class="view"> <button> <a href="know_and_buy/c14.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c15"></div>
+				<div class="product"> Kalpasi </div>
+				<div class="view"> <button> <a href="know_and_buy/c15.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c16"></div>
+				<div class="product"> Basil </div>
+				<div class="view"> <button> <a href="know_and_buy/c16.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c17"></div>
+				<div class="product"> Yellow Myrobalan </div>
+				<div class="view"> <button> <a href="know_and_buy/c17.html"> View </a> </button> </div>
+			</div>
+			<div class="cells"> 
+				<div class="image c18"></div>
+				<div class="product"> Nilavembu (Kalmegh) </div>
+				<div class="view"> <button> <a href="know_and_buy/c18.html"> View </a> </button> </div>
+			</div>
 		</div>
 	</main>
-	<div id="fill"></div>
 	<div id="dyk"></div>
 	<script>
 		var r_txt = [ "When many cultures were only nomadic forest dwellers over 5000 years ago, Indians established Harappan culture in Sindhu Valley (Indus Valley Civilization).", "The name 'India' is derived from the River Indus, the valleys around which were the home of the early settlers. The Aryan worshippers referred to the river Indus as the Sindhu.", "India is the largest democracy in the world, the 7th largest Country in the world, and one of the most ancient civilizations.", "The world's highest cricket ground is in Chail, Himachal Pradesh. Built in 1893 after leveling a hilltop, this cricket pitch is 2444 meters above sea level.", "Ayurveda is the earliest school of medicine known to mankind. The Father of Medicine, Charaka, consolidated Ayurveda 2500 years ago.", "Varanasi, also known as Benaras, was called 'the Ancient City' when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today.", "Sikhism originated in the Holy city of Amritsar in Punjab. Famous for housing the Golden Temple, the city was founded in 1577.", "The largest religious building in the world is Angkor Wat, a Hindu Temple in Cambodia built at the end of the 11th century.", "The oldest European church and synagogue in India are in the city of Cochin. They were built in 1503 and 1568 respectively.", "There are 300,000 active mosques in India, more than in any other country, including the Muslim world.", "His Holiness, the Dalai Lama, the exiled spiritual leader of Tibetan Buddhists, runs his government in exile from Dharmashala in northern India.", "The four religions born in India - Hinduism, Buddhism, Jainism, and Sikhism, are followed by 25% of the world's population.", "India provides safety for more than 300,000 refugees originally from Sri Lanka, Tibet, Bhutan, Afghanistan and Bangladesh, who escaped to flee religious and political persecution.", "The Baily Bridge is the highest bridge in the world. It is located in the Ladakh valley. It was built by the Indian Army in August 1982.", "Sushruta is regarded as the Father of Surgery. Over 2600 years ago Sushrata & his team conducted complicated surgeries like cataract, artificial limbs, cesareans, fractures, urinary stones, plastic surgery and brain surgeries." ];
