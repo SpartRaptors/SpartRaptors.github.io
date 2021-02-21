@@ -28,16 +28,16 @@
 		input,select{vertical-align:middle;}
 		/* MY CODE */
 		html { scroll-behavior: smooth; }
-		* { width: 100%; color: #D8F3DC; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-		body { user-select: none; background: #1E2736; }
+		* { width: 100%; color: #fff5ee; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+		body { user-select: none; background: #fff5ee; }
 		/* FIXED NAV BAR */
 		header {
 			top: 0;
 			z-index: 10;
 			position: sticky;
 			padding: 12px 0px;
-			background: #3564B0;
-			border-bottom: 2px solid #081C15;
+			background: #ff7f58;
+			border-bottom: 2px solid #ff440c;
 		}
 		.icon1, .hname, .icon2 {
 			font-size: 28px;
@@ -61,20 +61,39 @@
 			width: 100%;
 			height: 100px;
 			display: flex;
-			color: #2D6A4F;
+			color: #ff440c;
 			font-size: 25px;
+			margin-top: 40px;
 			align-items: center;
-			margin: 40px 0 20px 0;
+			border-radius: 40px 0;
 			justify-content: center;
 			background-color: #F0FFF0;
 			background-image: url("headings/c02heading.png");
 		}
 		/* MAIN */
-		main { padding: 0 20px; }
+		main { padding: 20px; }
 		/* GRIDS */
 		.categories { padding: 20px 0; }
-		.categories .cells { height: 100px; }
-		.categories .cells a { font-size: 25px; }
+		.categories .cells {
+			height: 100px;
+			background-size: cover;
+		}
+		.categories .product {
+			width: 60%;
+			color: #ff440c;
+			font-size: 20px;
+			text-align: left;
+		}
+		.categories .view {
+			width: 40%;
+			text-align: right;
+			padding-right: 10px;
+		}
+		.categories .product, .categories .view {
+			height: 100%;
+			display: table-cell;
+			vertical-align: middle;
+		}
 		#section1, #section2, #section3, #section4, #section5 {
 			width: 90%;
 			margin: auto;
@@ -83,54 +102,67 @@
 			padding-bottom: 20px;
 			grid-template-columns: 1fr 1fr;
 		}
+		#section1 .cells, #section2 .cells, #section3 .cells, #section4 .cells, #section5 .cells { background: #ffa958; }
 		.cells {
-			height: 80px;
 			display: table;
 			border-radius: 10px;
+			box-shadow: 10px 10px 10px rgba(0,0,0,0.35);
+		}
+		.image {
+			height: 106px;
 			background-size: cover;
-			background-color: #F0FFF0;
+			border-radius: 10px 10px 0 0;
+			border-bottom: 1px solid #ff440c;
 		}
-		.cells a {
+		.product {
+			height: 56px;
+			display: flex;
 			padding: 10px;
-			color: #3564B0;
-			font-size: 20px;
+			font-size: 18px;
 			text-align: center;
-			border-radius: 10px;
-			display: table-cell;
-			vertical-align: middle;
-			border: 2px solid #FFF;
+			align-items: center;
+			justify-content: center;
 		}
-		.cells span {
-			color: #3564B0;
-			font-size: 16px;
+		#section1 .view, #section2 .view, #section3 .view, #section4 .view, #section5 .view {
+			text-align: center;
+			padding: 0 10px 10px 10px;
 		}
+		.view button {
+			width: 80%;
+			height: 40px;
+			font-size: 18px;
+			line-height: 40px;
+			border-radius: 25px;
+			background-color: #ff440c;
+			box-shadow: 5px 5px 5px rgba(0,0,0,0.35);
+		}
+		.view button a {
+			width: 100%;
+			height: 100%;
+			display: inline-block;
+		}
+		.view button:hover { background: #ff7f58; }
 		/* GRID IMAGES */
 		.cat1 { background-image: url("fitness_store/cat01.png"); }
 		.cat2 { background-image: url("fitness_store/cat02.png"); }
 		.cat3 { background-image: url("fitness_store/cat03.png"); }
 		.cat4 { background-image: url("fitness_store/cat04.png"); }
 		.cat5 { background-image: url("fitness_store/cat05.png"); }
-		.c1 { background-image: url("fitness_store/c01.png"); }
-		.c2 { background-image: url("fitness_store/c02.png"); }
-		.c3 { background-image: url("fitness_store/c03.png"); }
-		.c4 { background-image: url("fitness_store/c04.png"); }
-		.c5 { background-image: url("fitness_store/c05.png"); }
-		.c6 { background-image: url("fitness_store/c06.png"); }
-		.c7 { background-image: url("fitness_store/c07.png"); }
-		.c8 { background-image: url("fitness_store/c08.png"); }
-		.c9 { background-image: url("fitness_store/c09.png"); }
-		.c10 { background-image: url("fitness_store/c10.png"); }
-		.c11 { background-image: url("fitness_store/c11.png"); }
-		.c12 { background-image: url("fitness_store/c12.png"); }
-		.c13 { background-image: url("fitness_store/c13.png"); }
-		.c14 { background-image: url("fitness_store/c14.png"); }
-		.c15 { background-image: url("fitness_store/c15.png"); }
-		/* DOTTED LINES */
-		#fill {
-			margin: 20px 0 40px 0;
-			border-top: 2px dashed #2D6A4F;
-		}
-		.hidden { display: none; }
+		.c1 { background-image: url("fitness_store/c01.jpeg"); }
+		.c2 { background-image: url("fitness_store/c02.jpeg"); }
+		.c3 { background-image: url("fitness_store/c03.jpeg"); }
+		.c4 { background-image: url("fitness_store/c04.jpeg"); }
+		.c5 { background-image: url("fitness_store/c05.jpeg"); }
+		.c6 { background-image: url("fitness_store/c06.jpeg"); }
+		.c7 { background-image: url("fitness_store/c07.jpeg"); }
+		.c8 { background-image: url("fitness_store/c08.jpeg"); }
+		.c9 { background-image: url("fitness_store/c09.jpeg"); }
+		.c10 { background-image: url("fitness_store/c10.jpeg"); }
+		.c11 { background-image: url("fitness_store/c11.jpeg"); }
+		.c12 { background-image: url("fitness_store/c12.jpeg"); }
+		.c13 { background-image: url("fitness_store/c13.jpeg"); }
+		.c14 { background-image: url("fitness_store/c14.jpeg"); }
+		.c15 { background-image: url("fitness_store/c15.jpeg"); }
 		/* DID YOU KNOW */
 		#dyk {
 			font-size: 18px;
@@ -139,7 +171,7 @@
 			text-align: justify;
 			margin-bottom: 40px;
 			background-size: contain;
-			background-color: #40916C;
+			background-color: #ffa958;
 			background-position: center;
 			background-repeat: no-repeat;
 			font-family: 'Courgette', cursive;
@@ -149,58 +181,148 @@
 </head>
 <body>
 	<header>
-		<div class="hname"> Go LOCAL
+		<div class="hname"> GoLocal
 			<div class="icon1"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
 			<div class="icon2"> <a onclick="logout()"> <i class="fa fa-user-circle"></i> </a> </div>
 		</div>
 	</header>
 	<div id="heading"> FITNESS STORE </div>
 	<main>
-			<div class="categories"> <div class="cells cat1"> <a onclick="section('section1')"> Protein - Rich </a> </div> </div>
-			<div id="section1">
-				<div class="cells c1"> <a href="fitness_store/c01.html"> Green Peas </a> </div>
-				<div class="cells c2"> <a href="fitness_store/c02.html"> Lentils </a> </div>
-				<div class="cells c3"> <a href="fitness_store/c03.html"> Kidney Beans </a> </div>
+		<div class="categories">
+			<div class="cells cat1">
+				<div class="product"> Protein - Rich </div>
+				<div class="view"> <button> <a id="hide1" onclick="section('section1','hide1')"> Show </a> </button> </div>
 			</div>
-			<div class="categories"> <div class="cells cat2"> <a onclick="section('section2')"> Good - Carbs </a> </div> </div>
-			<div id="section2">
-				<div class="cells c4"> <a href="fitness_store/c04.html"> Sweet Potatoes </a> </div>
-				<div class="cells c5"> <a href="fitness_store/c05.html"> Whole Grains </a> </div>
-				<div class="cells c6"> <a href="fitness_store/c06.html"> Beans </a> </div>
+		</div>
+		<div id="section1">
+			<div class="cells">
+				<div class="image c1"></div>
+				<div class="product"> Green Peas </div>
+				<div class="view"> <button> <a href="fitness_store/c01.html"> View </a> </button> </div>
 			</div>
-			<div class="categories"> <div class="cells cat3"> <a onclick="section('section3')"> Healthy - Fats </a> </div> </div>
-			<div id="section3">
-				<div class="cells c7"> <a href="fitness_store/c07.html"> Nuts </a> </div>
-				<div class="cells c8"> <a href="fitness_store/c08.html"> Avocado </a> </div>
-				<div class="cells c9"> <a href="fitness_store/c09.html"> Yogurt </a> </div>
+			<div class="cells">
+				<div class="image c2"></div>
+				<div class="product"> Lentils </div>
+				<div class="view"> <button> <a href="fitness_store/c02.html"> View </a> </button> </div>
 			</div>
-			<div class="categories"> <div class="cells cat4"> <a onclick="section('section4')"> Iron - Rich </a> </div> </div>
-			<div id="section4">
-				<div class="cells c10"> <a href="fitness_store/c10.html"> Legumes </a> </div>
-				<div class="cells c11"> <a href="fitness_store/c11.html"> Leafy Greens </a> </div>
-				<div class="cells c12"> <a href="fitness_store/c12.html"> Beetroot </a> </div>
+			<div class="cells">
+				<div class="image c3"></div>
+				<div class="product"> Kidney Beans </div>
+				<div class="view"> <button> <a href="fitness_store/c03.html"> View </a> </button> </div>
 			</div>
-			<div class="categories"> <div class="cells cat5"> <a onclick="section('section5')"> Vitamin - Based </a> </div> </div>
-			<div id="section5">
-				<div class="cells c13"> <a href="fitness_store/c13.html"> Carrots </a> </div>
-				<div class="cells c14"> <a href="fitness_store/c14.html"> Whole Milk </a> </div>
-				<div class="cells c15"> <a href="fitness_store/c15.html"> Tomatoes </a> </div>
+		</div>
+		<div class="categories">
+			<div class="cells cat2">
+				<div class="product"> Good - Carbs </div>
+				<div class="view"> <button> <a id="hide2" onclick="section('section2','hide2')"> Show </a> </button> </div>
 			</div>
+		</div>
+		<div id="section2">
+			<div class="cells">
+				<div class="image c4"></div>
+				<div class="product"> Sweet Potatoes </div>
+				<div class="view"> <button> <a href="fitness_store/c04.html"> View </a> </button> </div>
+			</div>
+			<div class="cells">
+				<div class="image c5"></div>
+				<div class="product"> Whole Grains </div>
+				<div class="view"> <button> <a href="fitness_store/c05.html"> View </a> </button> </div>
+			</div>
+			<div class="cells">
+				<div class="image c6"></div>
+				<div class="product"> Beans </div>
+				<div class="view"> <button> <a href="fitness_store/c06.html"> View </a> </button> </div>
+			</div>
+		</div>
+		<div class="categories">
+			<div class="cells cat3">
+				<div class="product"> Healthy - Fats </div>
+				<div class="view"> <button> <a id="hide3" onclick="section('section3','hide3')"> Show </a> </button> </div>
+			</div>
+		</div>
+		<div id="section3">
+			<div class="cells">
+				<div class="image c7"></div>
+				<div class="product"> Nuts </div>
+				<div class="view"> <button> <a href="fitness_store/c07.html"> View </a> </button> </div>
+			</div>
+			<div class="cells">
+				<div class="image c8"></div>
+				<div class="product"> Avocado </div>
+				<div class="view"> <button> <a href="fitness_store/c08.html"> View </a> </button> </div>
+			</div>
+			<div class="cells">
+				<div class="image c9"></div>
+				<div class="product"> Yogurt </div>
+				<div class="view"> <button> <a href="fitness_store/c09.html"> View </a> </button> </div>
+			</div>
+		</div>
+		<div class="categories">
+			<div class="cells cat4">
+				<div class="product"> Iron - Rich </div>
+				<div class="view"> <button> <a id="hide4" onclick="section('section4','hide4')"> Show </a> </button> </div>
+			</div>
+		</div>
+		<div id="section4">
+			<div class="cells">
+				<div class="image c10"></div>
+				<div class="product"> Legumes </div>
+				<div class="view"> <button> <a href="fitness_store/c10.html"> View </a> </button> </div>
+			</div>
+			<div class="cells">
+				<div class="image c11"></div>
+				<div class="product"> Leafy Greens </div>
+				<div class="view"> <button> <a href="fitness_store/c11.html"> View </a> </button> </div>
+			</div>
+			<div class="cells">
+				<div class="image c12"></div>
+				<div class="product"> Beetroot </div>
+				<div class="view"> <button> <a href="fitness_store/c12.html"> View </a> </button> </div>
+			</div>
+		</div>
+		<div class="categories">
+			<div class="cells cat5">
+				<div class="product"> Vitamin - Based </div>
+				<div class="view"> <button> <a id="hide5" onclick="section('section5','hide5')"> Show </a> </button> </div>
+			</div>
+		</div>
+		<div id="section5">
+			<div class="cells">
+				<div class="image c13"></div>
+				<div class="product"> Carrots </div>
+				<div class="view"> <button> <a href="fitness_store/c13.html"> View </a> </button> </div>
+			</div>
+			<div class="cells">
+				<div class="image c14"></div>
+				<div class="product"> Whole Milk </div>
+				<div class="view"> <button> <a href="fitness_store/c14.html"> View </a> </button> </div>
+			</div>
+			<div class="cells">
+				<div class="image c15"></div>
+				<div class="product"> Tomatoes </div>
+				<div class="view"> <button> <a href="fitness_store/c15.html"> View </a> </button> </div>
+			</div>
+		</div>
 	</main>
-	<div id="fill"></div>
 	<div id="dyk"></div>
 	<script>
 		var r_txt = [ "When many cultures were only nomadic forest dwellers over 5000 years ago, Indians established Harappan culture in Sindhu Valley (Indus Valley Civilization).", "The name 'India' is derived from the River Indus, the valleys around which were the home of the early settlers. The Aryan worshippers referred to the river Indus as the Sindhu.", "India is the largest democracy in the world, the 7th largest Country in the world, and one of the most ancient civilizations.", "The world's highest cricket ground is in Chail, Himachal Pradesh. Built in 1893 after leveling a hilltop, this cricket pitch is 2444 meters above sea level.", "Ayurveda is the earliest school of medicine known to mankind. The Father of Medicine, Charaka, consolidated Ayurveda 2500 years ago.", "Varanasi, also known as Benaras, was called 'the Ancient City' when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today.", "Sikhism originated in the Holy city of Amritsar in Punjab. Famous for housing the Golden Temple, the city was founded in 1577.", "The largest religious building in the world is Angkor Wat, a Hindu Temple in Cambodia built at the end of the 11th century.", "The oldest European church and synagogue in India are in the city of Cochin. They were built in 1503 and 1568 respectively.", "There are 300,000 active mosques in India, more than in any other country, including the Muslim world.", "His Holiness, the Dalai Lama, the exiled spiritual leader of Tibetan Buddhists, runs his government in exile from Dharmashala in northern India.", "The four religions born in India - Hinduism, Buddhism, Jainism, and Sikhism, are followed by 25% of the world's population.", "India provides safety for more than 300,000 refugees originally from Sri Lanka, Tibet, Bhutan, Afghanistan and Bangladesh, who escaped to flee religious and political persecution.", "The Baily Bridge is the highest bridge in the world. It is located in the Ladakh valley. It was built by the Indian Army in August 1982.", "Sushruta is regarded as the Father of Surgery. Over 2600 years ago Sushrata & his team conducted complicated surgeries like cataract, artificial limbs, cesareans, fractures, urinary stones, plastic surgery and brain surgeries." ];
 		var j = Math.floor(r_txt.length * Math.random());
 		_e("dyk").innerHTML=r_txt[j];
 		function logout() { Android.logout(); }
-		function section(s) {
-			a = check(s);
+		function section(s,h) {
+			a = check(s,h);
 			_e(s).style.display = a;
 		}
-		function check(s2) {
-			if(_e(s2).style.display === "grid") { return "none"; }
-			else { return "grid"; }
+		function check(s2,h2) {
+			if(_e(s2).style.display === "grid") {
+				_e(h2).innerHTML = "Show";
+				return "none";
+			}
+			else {
+				_e(h2).innerHTML = "Hide";
+				return "grid";
+			}
 		}
 		function _e(id) { return document.getElementById(id); }
 	</script>
