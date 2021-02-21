@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Privacy Policy </title>
+	<title> Know & Buy </title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width" >
 	<meta name="format-detection" content="telephone=no" />
@@ -28,16 +28,16 @@
 		input,select{vertical-align:middle;}
 		/* MY CODE */
 		html { scroll-behavior: smooth; }
-		* { width: 100%; color: #D8F3DC; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-		body { user-select: none; background: #1E2736; }
+		* { width: 100%; color: #fff5ee; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+		body { user-select: none; background: #fff5ee; }
 		/* FIXED NAV BAR */
 		header {
 			top: 0;
 			z-index: 10;
 			position: sticky;
 			padding: 12px 0px;
-			background: #3564B0;
-			border-bottom: 2px solid #081C15;
+			background: #ff7f58;
+			border-bottom: 2px solid #ff440c;
 		}
 		.icon1, .hname, .icon2 {
 			font-size: 28px;
@@ -61,43 +61,40 @@
 			width: 100%;
 			height: 100px;
 			display: flex;
-			color: #2D6A4F;
+			color: #ff440c;
 			font-size: 25px;
+			margin-top: 40px;
 			align-items: center;
-			margin: 40px 0 20px 0;
+			border-radius: 40px 0;
 			justify-content: center;
 			background-color: #F0FFF0;
 			background-image: url("headings/c10heading.png");
 		}
 		/* MAIN */
-		main { padding: 10px 20px; }
+		main { padding: 30px 20px; }
 		.policy {
+			color: #ffa958;
 			font-size: 18px;
 			line-height: 30px;
 			text-align: justify;
 		}
+		.policy sub, .policy span { color: #ff7f58; }
 		.policy sub, .policy span, .disclaimer {
 			font-style: italic;
 			font-family: Georgia, serif;
 		}
 		.policy span, .disclaimer { font-size: 20px; }
-		/* DOTTED LINES */
-		.fill {
-			margin: 20px 0 40px 0;
-			border-top: 2px dashed #2D6A4F;
-		}
 		/* DISCALIMER */
 		.disclaimer {
 			padding: 14px 20px;
 			text-align: justify;
-			margin-bottom: 40px;
-			background: #40916C;
+			background: #ff7f58;
 		}
 	</style>
 </head>
 <body>
 	<header>
-		<div class="hname"> Go LOCAL
+		<div class="hname"> GoLocal
 			<div class="icon1"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
 			<div class="icon2"> <a onclick="logout()"> <i class="fa fa-user-circle"></i> </a> </div>
 		</div>
@@ -106,7 +103,6 @@
 	<main>
 		<div class="policy"> <sub> [Decemeber, 2020] </sub> <br><br> <span> GoLocal </span> respects the privacy of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our mobile application. Please read this Privacy Policy carefully. <br><br> We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the “Last updated” date of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates. You will be deemed to have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Privacy Policy by your continued use of the Application after the date such revised Privacy Policy is posted. <br><br> This Privacy Policy does not apply to the third-party online / mobile store from which you install the Application or make payments, including any in-game virtual items, which may also collect and use data about you. We are not responsible for any of the data collected by any such third party. </div>
 	</main>
-	<div class="fill"></div>
 	<div class="disclaimer"> THIS APP IS NOT USED FOR ANY COMMERCIAL / MONETIZATION PURPOSE </div>
 	<script>
 		function logout() { Android.logout(); }
