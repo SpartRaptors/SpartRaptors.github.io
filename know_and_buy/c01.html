@@ -28,126 +28,192 @@
 		input,select{vertical-align:middle;}
 		/* MY CODE */
 		html { scroll-behavior: smooth; }
-		* { width: 100%; color: #D8F3DC; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-		body { user-select: none; background: #1E2736; }
+		* { width: 100%; color: #fff5ee; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+		body { user-select: none; background: #fff5ee; }
 		/* FIXED NAV BAR */
 		header {
 			top: 0;
 			z-index: 10;
-			padding: 15px 0;
 			position: sticky;
-			background: #3564B0;
-			border-bottom: 5px solid #081C15;
+			padding: 12px 0px;
+			background: #ff7f58;
+			border-bottom: 2px solid #ff440c;
 		}
-		.icon, .hname {
-			font-size: 25px;
+		.icon1, .hname, .icon2 {
+			font-size: 28px;
 			display: inline-block;
 		}
-		.icon {
+		.icon1, .icon2 {
 			top: 0;
-			left: 0;
 			z-index: 10;
 			padding: 0px 10px;
 			position: absolute;
 			width: fit-content;
 		}
+		.icon1 { left: 0; }
+		.icon2 { right: 0; }
 		.hname {
 			position: relative;
 			text-align: center;
 		}
 		/* MAIN */
-		main { padding: 0 15px; }
+		main { padding: 0 20px; }
+		/* PRODUCT */
 		.section {
 			width: 100%;
 			display: block;
-			margin: 20px 0;
+			padding: 20px 0;
 		}
 		.section img {
-			height: auto;
-			max-width: 100%;
-			margin-bottom: 10px;
+			padding: 20px 0;
+			position: relative;
+			
+			background-size: cover;
+			background-repeat: no-repeat;
 		}
-		.products, .section button, .section a {
+		.cells {
+			display: flex;
+			padding-bottom: 10px;
+		}
+		.food_name {
+			width: 60%;
+			color: #ff440c;
+			font-size: 20px;
+			line-height: 40px;
+			font-style: italic;
+			font-family: Georgia, serif;
+		}
+		.quantity {
+			width: 40%;
+			display: flex;
+			margin: 0 auto;
+			text-align: center;
+			border-radius: 40px;
+			background: #ffa958;
+			box-shadow: 5px 5px 5px rgba(0,0,0,0.35);
+		}
+		.quantity div {
+			height: 40px;
+			font-size: 30px;
+			line-height: 40px;
+		}
+		.qicons { background: #ff440c; }
+		.ql { border-radius: 40px 0 0 40px; }
+		.qr { border-radius: 0 40px 40px 0; }
+		.products { padding-top: 10px; }
+		.products, .section #addtocartbtn, .section a, .section button {
+			color: #ffa958;
 			font-size: 18px;
 			font-style: italic;
 			font-family: Georgia, serif;
 		}
-		.section p {
-			line-height: 24px;
-			text-align: justify;
-		}
+		.section a { margin-bottom: 20px; }
 		.section span { display: block; }
 		.section span, .section span a { text-align: right; }
 		.section span a {
-			color: #3564B0;
+			color: #ff7f58;
 			text-decoration: underline;
 		}
-		.section span a:hover { color: red; }
+		.section span a:hover { color: #ff440c; }
 		/* BUTTONS */
-		.section button, .section .a {
-			width: 100%;
-			padding: 15px;
-			display: block;
-			background: #2D6A4F;
-			border: 2px solid #F0FFF0;
-		}
-		.section button:hover, .section .a:hover { background: #3564B0; }
-		.section button {
+		.upload { display: none; }
+		.section #addtocartbtn, .section button {
+			width: 75%;
+			margin: 0 auto;
 			margin-bottom: 20px;
+			border-radius: 40px;
 		}
-		/* HIDDEN DIVS */
-		#section4, #section5, #section6 {
-			display: none;
-			margin-top: 15px;
+		.section #addtocartbtn {
+			border: none;
+		}
+		.section #addtocartbtn, .section .a, .section button {
+			padding: 15px;
+			color: #fff5ee;
+			display: block;
+			background: #ff440c;
+			box-shadow: 10px 10px 10px rgba(0,0,0,0.35);
+		}
+		.section #addtocartbtn:hover, .section button:hover, .section .a:hover { background: #ffa958; }
+		#section1 {
+			color: #ffa958;
 			line-height: 24px;
 			text-align: justify;
+			padding-bottom: 16px;
 		}
-		/* DOTTED LINES */
-		.fill {
+		/* HIDDEN DIVS */
+		#section2, #section3, #section4 {
+			display: none;
+			color: #ffa958;
+			margin-top: 15px;
+			line-height: 24px;
 			margin-bottom: 20px;
-			border-top: 2px dashed #2D6A4F;
+			text-align: justify;
 		}
 	</style>
 </head>
-<body id='target'>
+<body>
 	<header>
-		<div class="hname"> Ashwagandha
-			<div class="icon"> <a href="../know_and_buy.html"> <i class="fas fa-chevron-circle-left"></i> </a> </div>
+		<div class="hname"> GoLocal
+			<div class="icon1"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
+			<div class="icon2"> <a onclick="logout()"> <i class="fa fa-user-circle"></i> </a> </div>
 		</div>
 	</header>
 	<main>
 		<div class="section">
-			<img src="c01.jpeg">
-			<p class="products"> Ashwagandha roots - Rs. 700 <br><br> Ashwangandha powder - Rs.99 </p>
+			<img src="https://www.firstmr.com/wp-content/uploads/2017/05/semiyapayasam-1.jpg">
+			<div class="cells">
+			<div class="food_name"> Ashwagandha </div>
+			<div class="quantity">
+				<div class="qicons ql" onclick="sub()"> − </div>
+				<div class="food_quantity"> <p id="fq"> 1 </p> </div>
+				<div class="qicons qr" onclick="add()"> + </div>
+			</div>
+			</div>
+			<p class="products"> Ashwangandha powder - Rs.99 </p>
 		</div>
 		<div class="section">
-			<button onclick="alertFunc()"> Add to Cart </button>
+			<form action="../cart.html" method="GET">
+				<input type="text" value="know_and_buy/c01.jpeg" name="image" class="upload">
+				<input type="text" value="Ashwagandha powder" name="productName" class="upload">
+				<input type="text" value="1" name="quantity" class="upload" id="qt">
+				<input type="text" value="99" name="price" class="upload">
+				<input type="submit" value="Add to Cart" id="addtocartbtn">
+			</form>
+			<!-- <button onclick="alertFunc()"> Add to Cart </button> -->
 			<button onclick="alertFunc()"> Buy Now </button>
 		</div>
-		<div class="fill"></div>
+		<div id="section1"> Support our locals who are working on the agricultural fields throughout day and night to protect our natural foods and herbs. Buy now. </div>
 		<div class="section">
-			<img src="c01.jpg"/>
-			<p> Support our locals who are working on the agricultural fields throughout day and night to protect our natural foods and herbs. Buy now. </p>
-		</div>
-		<div class="section">
-			<a class="a" onclick="section('section4')"> Product Description </a>
-			<div id="section4"> Ashwagandha (Withania somnifera, fam. Solanaceae) is commonly known as “Indian Winter cherry” or “Indian Ginseng”. It is one of the most important herb of Ayurveda (the traditional system of medicine in India) used for millennia as a Rasayana for its wide ranging health benefits. Ashwagandha is commonly available as a churna, a fine sieved powder that can be mixed with water, ghee (clarified butter) or honey. It enhances the function of the brain and nervous system and improves the memory. It improves the function of the reproductive system promoting a healthy sexual and reproductive balance. Being a powerful adaptogen, it enhances the body's resilience to stress. Ashwagandha improves the body's defence against disease by improving the cell-mediated immunity. </div>
-		</div>
-		<div class="section">
-			<a class="a" onclick="section('section5')"> Ashwagandha Sleep Tonic </a>
-			<div id="section5">
+			<a class="a" onclick="section('section2')"> Product Description </a>
+			<div id="section2"> Ashwagandha (Withania somnifera, fam. Solanaceae) is commonly known as “Indian Winter cherry” or “Indian Ginseng”. It is one of the most important herb of Ayurveda (the traditional system of medicine in India) used for millennia as a Rasayana for its wide ranging health benefits. Ashwagandha is commonly available as a churna, a fine sieved powder that can be mixed with water, ghee (clarified butter) or honey. It enhances the function of the brain and nervous system and improves the memory. It improves the function of the reproductive system promoting a healthy sexual and reproductive balance. Being a powerful adaptogen, it enhances the body's resilience to stress. Ashwagandha improves the body's defence against disease by improving the cell-mediated immunity. </div>
+			<a class="a" onclick="section('section3')"> Ashwagandha Sleep Tonic </a>
+			<div id="section3">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/HM289ghVQvs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
-		</div>
-		<div class="section">
-			<a class="a" onclick="section('section6')"> Testimonials </a>
-			<div id="section6">
+			<a class="a" onclick="section('section4')"> Testimonials </a>
+			<div id="section4">
 				I took ashwagandha in combination with a few other herbs that support the nervous system during my last year of studies, where I was completing two courses simultaneously, deeply immersed in the student clinic, writing for the blog and in the throws of setting up a new business. To say that things were overwhelming is a bit of an understatement! Fortunately, I believe the herbs I was taking were incredibly supportive. I can speak directly to ashwagandha as I had also taken it as a simple (that is, taken it therapeutically as a single remedy, without blending it with other herbs) for part of that time. This is a great way to get to know a herb. I have to say my overall resilience improved, and despite it being an incredibly challenging year, I felt in control and able to cope. My sleep pattern improved and I was waking feeling refreshed, with enough energy to exercise regularly – even if it were only a power walk around the neighbourhood. It seems to be far less stimulating than the other adaptogens – it gives a very gentle, relaxed energy. I've since turned to ashwagandha on and off, typically in combinations with other adaptogens and nervines, for stress support during periods of intensity as needed.
 				<span> Source: <a href="https://ascensionkitchen.com/ashwagandha-sleep-tonic/"> Click here </a> </span>
 			</div>
 		</div>
 	</main>
 	<script>
+		var quantity = 1;
+		function add() {
+			if(quantity < 10) {
+				quantity+= 1;
+				_e("fq").innerHTML = quantity;
+				_e("qt").value = quantity;
+			}
+		}
+		function sub() {
+			if(quantity > 1) {
+				quantity-= 1;
+				_e("fq").innerHTML = quantity;
+				_e("qt").value = quantity;
+			}
+		}
+		function submitForm() { _e("addtocartbtn").submit(); }
 		function section(s) {
 			a = check(s);
 			_e(s).style.display = a;
@@ -158,6 +224,7 @@
 		}
 		function alertFunc() { alert("Item added to cart. Thank you for shopping"); }
 		function _e(id) { return document.getElementById(id); }
+		function logout() { Android.logout(); }
 	</script>
 </body>
 </html>
