@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ashwagandha </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" >
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="canonical" href="/" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<style>
+		/* RESET STYLESHEET */
+		html,body,div,p,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,button,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,a,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;text-decoration:none;}
+		body{line-height:1;}
+		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+		nav ul, ul, li{list-style:none;}
+		img {pointer-events:none;}
+		blockquote,q{quotes:none;}
+		blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+		ins{background-color:#FF9;color:#111;text-decoration:none;}
+		mark{background-color:#FF9;color:#111;font-style:italic;font-weight:bold;}
+		del{text-decoration:line-through;}
+		abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}
+		table{border-collapse:collapse;border-spacing:0;}
+		hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
+		input,select{vertical-align:middle;}
+		/* MY CODE */
+		html { scroll-behavior: smooth; }
+		* { width: 100%; color: #fff5ee; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+		body { user-select: none; background: #fff5ee; }
+		/* FIXED NAV BAR */
+		header {
+			top: 0;
+			z-index: 10;
+			position: sticky;
+			padding: 12px 0px;
+			background: #ff7f58;
+			border-bottom: 2px solid #ff440c;
+		}
+		.icon1, .hname, .icon2 {
+			font-size: 28px;
+			display: inline-block;
+		}
+		.icon1, .icon2 {
+			top: 0;
+			z-index: 10;
+			padding: 0px 10px;
+			position: absolute;
+			width: fit-content;
+		}
+		.icon1 { left: 0; }
+		.icon2 { right: 0; }
+		.hname {
+			position: relative;
+			text-align: center;
+		}
+		/* MAIN */
+		main { padding: 0 20px; }
+		/* PRODUCT */
+		.section {
+			width: 100%;
+			display: block;
+			padding: 20px 0;
+		}
+		.section img {
+			padding: 20px 0;
+			position: relative;
+			
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.cells {
+			display: flex;
+			padding-bottom: 10px;
+		}
+		.food_name {
+			width: 60%;
+			color: #ff440c;
+			font-size: 20px;
+			line-height: 40px;
+			font-style: italic;
+			font-family: Georgia, serif;
+		}
+		.quantity {
+			width: 40%;
+			height: 40px;
+			display: flex;
+			margin: 0 auto;
+			text-align: center;
+			border-radius: 40px;
+			background: #ffa958;
+			box-shadow: 5px 5px 5px rgba(0,0,0,0.35);
+		}
+		.quantity div {
+			font-size: 30px;
+			line-height: 40px;
+		}
+		.qicons { background: #ff440c; }
+		.ql { border-radius: 40px 0 0 40px; }
+		.qr { border-radius: 0 40px 40px 0; }
+		.products { padding-top: 10px; }
+		.products, .section #addtocartbtn, .section a {
+			color: #ffa958;
+			font-size: 18px;
+			font-style: italic;
+			font-family: Georgia, serif;
+		}
+		.section a { margin-bottom: 20px; }
+		.section span { display: block; }
+		.section span, .section span a { text-align: right; }
+		.section span a {
+			color: #ff7f58;
+			text-decoration: underline;
+		}
+		.section span a:hover { color: #ff440c; }
+		/* BUTTONS */
+		.upload { display: none; }
+		.section #addtocartbtn {
+			width: 75%;
+			border: none;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			border-radius: 40px;
+		}
+		.section #addtocartbtn, .section .a {
+			padding: 15px;
+			color: #fff5ee;
+			display: block;
+			background: #ff440c;
+			box-shadow: 10px 10px 10px rgba(0,0,0,0.35);
+		}
+		.section #addtocartbtn:hover, .section .a:hover { background: #ffa958; }
+		#section1 {
+			color: #ffa958;
+			line-height: 24px;
+			text-align: justify;
+			padding-bottom: 16px;
+		}
+		/* HIDDEN DIVS */
+		#section2, #section3, #section4 {
+			display: none;
+			color: #ffa958;
+			margin-top: 15px;
+			line-height: 24px;
+			margin-bottom: 20px;
+			text-align: justify;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="hname"> GoLocal
+			<div class="icon1"> <a href="../index.html"> <i class="fas fa-home"></i> </a> </div>
+			<div class="icon2"> <a onclick="logout()"> <i class="fa fa-user-circle"></i> </a> </div>
+		</div>
+	</header>
+	<main>
+		<div class="section">
+			<img src="c01.jpeg">
+			<div class="cells">
+			<div class="food_name"> Ashwagandha </div>
+			<div class="quantity">
+				<div class="qicons ql" onclick="sub()"> − </div>
+				<div class="food_quantity"> <p id="fq"> 1 </p> </div>
+				<div class="qicons qr" onclick="add()"> + </div>
+			</div>
+			</div>
+			<p class="products"> Ashwangandha powder - Rs.99/kg </p>
+		</div>
+		<div class="section">
+			<form action="../cart.html" method="GET">
+				<input type="text" value="know_and_buy/c01.jpeg" name="image" class="upload">
+				<input type="text" value="Ashwagandha powder (1kg)" name="productName" class="upload">
+				<input type="text" value="1" name="quantity" class="upload" id="qt">
+				<input type="text" value="99" name="price" class="upload">
+				<input type="submit" value="Buy Now" id="addtocartbtn">
+			</form>
+		</div>
+		<div id="section1"> Support our locals who are working on the agricultural fields throughout day and night to protect our natural foods and herbs. Buy now. </div>
+		<div class="section">
+			<a class="a" onclick="section('section2')"> Product Description </a>
+			<div id="section2"> Ashwagandha (Withania somnifera, fam. Solanaceae) is commonly known as “Indian Winter cherry” or “Indian Ginseng”. It is one of the most important herb of Ayurveda (the traditional system of medicine in India) used for millennia as a Rasayana for its wide ranging health benefits. Ashwagandha is commonly available as a churna, a fine sieved powder that can be mixed with water, ghee (clarified butter) or honey. It enhances the function of the brain and nervous system and improves the memory. It improves the function of the reproductive system promoting a healthy sexual and reproductive balance. Being a powerful adaptogen, it enhances the body's resilience to stress. Ashwagandha improves the body's defence against disease by improving the cell-mediated immunity. </div>
+			<a class="a" onclick="section('section3')"> Ashwagandha Sleep Tonic </a>
+			<div id="section3">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/HM289ghVQvs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<a class="a" onclick="section('section4')"> Testimonials </a>
+			<div id="section4">
+				I took ashwagandha in combination with a few other herbs that support the nervous system during my last year of studies, where I was completing two courses simultaneously, deeply immersed in the student clinic, writing for the blog and in the throws of setting up a new business. To say that things were overwhelming is a bit of an understatement! Fortunately, I believe the herbs I was taking were incredibly supportive. I can speak directly to ashwagandha as I had also taken it as a simple (that is, taken it therapeutically as a single remedy, without blending it with other herbs) for part of that time. This is a great way to get to know a herb. I have to say my overall resilience improved, and despite it being an incredibly challenging year, I felt in control and able to cope. My sleep pattern improved and I was waking feeling refreshed, with enough energy to exercise regularly – even if it were only a power walk around the neighbourhood. It seems to be far less stimulating than the other adaptogens – it gives a very gentle, relaxed energy. I've since turned to ashwagandha on and off, typically in combinations with other adaptogens and nervines, for stress support during periods of intensity as needed.
+				<span> Source: <a href="https://ascensionkitchen.com/ashwagandha-sleep-tonic/"> Click here </a> </span>
+			</div>
+		</div>
+	</main>
+	<script>
+		var quantity = 1;
+		function add() {
+			if(quantity < 10) {
+				quantity+= 1;
+				_e("fq").innerHTML = quantity;
+				_e("qt").value = quantity;
+			}
+		}
+		function sub() {
+			if(quantity > 1) {
+				quantity-= 1;
+				_e("fq").innerHTML = quantity;
+				_e("qt").value = quantity;
+			}
+		}
+		function submitForm() { _e("addtocartbtn").submit(); }
+		function section(s) {
+			a = check(s);
+			_e(s).style.display = a;
+		}
+		function check(s2) {
+			if(_e(s2).style.display === "block") { return "none"; }
+			else { return "block"; }
+		}
+		function _e(id) { return document.getElementById(id); }
+		function logout() { Android.logout(); }
+	</script>
+</body>
+</html>

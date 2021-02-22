@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Yellow Myrobalan </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" >
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="canonical" href="/" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<style>
+		/* RESET STYLESHEET */
+		html,body,div,p,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,button,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,a,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;text-decoration:none;}
+		body{line-height:1;}
+		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+		nav ul, ul, li{list-style:none;}
+		img {pointer-events:none;}
+		blockquote,q{quotes:none;}
+		blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+		ins{background-color:#FF9;color:#111;text-decoration:none;}
+		mark{background-color:#FF9;color:#111;font-style:italic;font-weight:bold;}
+		del{text-decoration:line-through;}
+		abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}
+		table{border-collapse:collapse;border-spacing:0;}
+		hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
+		input,select{vertical-align:middle;}
+		/* MY CODE */
+		html { scroll-behavior: smooth; }
+		* { width: 100%; color: #fff5ee; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+		body { user-select: none; background: #fff5ee; }
+		/* FIXED NAV BAR */
+		header {
+			top: 0;
+			z-index: 10;
+			position: sticky;
+			padding: 12px 0px;
+			background: #ff7f58;
+			border-bottom: 2px solid #ff440c;
+		}
+		.icon1, .hname, .icon2 {
+			font-size: 28px;
+			display: inline-block;
+		}
+		.icon1, .icon2 {
+			top: 0;
+			z-index: 10;
+			padding: 0px 10px;
+			position: absolute;
+			width: fit-content;
+		}
+		.icon1 { left: 0; }
+		.icon2 { right: 0; }
+		.hname {
+			position: relative;
+			text-align: center;
+		}
+		/* MAIN */
+		main { padding: 0 20px; }
+		/* PRODUCT */
+		.section {
+			width: 100%;
+			display: block;
+			padding: 20px 0;
+		}
+		.section img {
+			padding: 20px 0;
+			position: relative;
+			
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.cells {
+			display: flex;
+			padding-bottom: 10px;
+		}
+		.food_name {
+			width: 60%;
+			color: #ff440c;
+			font-size: 20px;
+			line-height: 40px;
+			font-style: italic;
+			font-family: Georgia, serif;
+		}
+		.quantity {
+			width: 40%;
+			height: 40px;
+			display: flex;
+			margin: 0 auto;
+			text-align: center;
+			border-radius: 40px;
+			background: #ffa958;
+			box-shadow: 5px 5px 5px rgba(0,0,0,0.35);
+		}
+		.quantity div {
+			font-size: 30px;
+			line-height: 40px;
+		}
+		.qicons { background: #ff440c; }
+		.ql { border-radius: 40px 0 0 40px; }
+		.qr { border-radius: 0 40px 40px 0; }
+		.products { padding-top: 10px; }
+		.products, .section #addtocartbtn, .section a {
+			color: #ffa958;
+			font-size: 18px;
+			font-style: italic;
+			font-family: Georgia, serif;
+		}
+		.section a { margin-bottom: 20px; }
+		.section span { display: block; }
+		.section span, .section span a { text-align: right; }
+		.section span a {
+			color: #ff7f58;
+			text-decoration: underline;
+		}
+		.section span a:hover { color: #ff440c; }
+		/* BUTTONS */
+		.upload { display: none; }
+		.section #addtocartbtn {
+			width: 75%;
+			border: none;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			border-radius: 40px;
+		}
+		.section #addtocartbtn, .section .a {
+			padding: 15px;
+			color: #fff5ee;
+			display: block;
+			background: #ff440c;
+			box-shadow: 10px 10px 10px rgba(0,0,0,0.35);
+		}
+		.section #addtocartbtn:hover, .section .a:hover { background: #ffa958; }
+		#section1 {
+			color: #ffa958;
+			line-height: 24px;
+			text-align: justify;
+			padding-bottom: 16px;
+		}
+		/* HIDDEN DIVS */
+		#section2, #section3, #section4 {
+			display: none;
+			color: #ffa958;
+			margin-top: 15px;
+			line-height: 24px;
+			margin-bottom: 20px;
+			text-align: justify;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="hname"> GoLocal
+			<div class="icon1"> <a href="../index.html"> <i class="fas fa-home"></i> </a> </div>
+			<div class="icon2"> <a onclick="logout()"> <i class="fa fa-user-circle"></i> </a> </div>
+		</div>
+	</header>
+	<main>
+		<div class="section">
+			<img src="c17.jpeg">
+			<div class="cells">
+			<div class="food_name"> Yellow Myrobalan </div>
+			<div class="quantity">
+				<div class="qicons ql" onclick="sub()"> − </div>
+				<div class="food_quantity"> <p id="fq"> 1 </p> </div>
+				<div class="qicons qr" onclick="add()"> + </div>
+			</div>
+			</div>
+			<p class="products"> Yellow myrobalan – Rs.330/100gm </p>
+		</div>
+		<div class="section">
+			<form action="../cart.html" method="GET">
+				<input type="text" value="know_and_buy/c17.jpeg" name="image" class="upload">
+				<input type="text" value="Yellow myrobalan (100gm)" name="productName" class="upload">
+				<input type="text" value="1" name="quantity" class="upload" id="qt">
+				<input type="text" value="330" name="price" class="upload">
+				<input type="submit" value="Buy Now" id="addtocartbtn">
+			</form>
+		</div>
+		<div id="section1"> Support our locals who are working on the agricultural fields throughout day and night to protect our natural foods and herbs. Buy now. </div>
+		<div class="section">
+			<a class="a" onclick="section('section2')"> Product Description </a>
+			<div id="section2"> Terminalia chebula is a tree in the Combretaceae family, found wild in the forests of India and surrounding countries at high altitudes, that produces a fruit known as a myrobalan. The herb is known as Haritaki, Chebulic myrobalan, Bihara, and Harada in different dialects, and is one of the three fruits found in the traditional formulation of Triphala. It is named Haritaki after ‘harita’, which means green, and because it is sacred to Lord Shiva, known as ‘Hara,’ and grows in the Himalayas where Lord Shiva was thought to reside. Haritaki is a very important herb in Ayurveda, thought to promote fearlessness, feed the brain and nervous system, and bring awareness and wisdom. The Buddha is often portrayed in Tibetan sacred pictures with a Haritaki fruit in his hand. Chebulic myrobalan is used as a bowel regulatory tonic and gentle laxative in Traditional Ayurvedic Medicine. It has emollient properties and bitter principles that encourage peristalsis and proper digestion. It contains five tastes: sour, sweet, pungent, bitter, and astringent, with the most predominant being bitter and astringent. It is considered balancing for all three doshas (constitutions), but especially rejuvenative to the vata dosha, which is associated with air and movement. </div>
+			<a class="a" onclick="section('section3')"> Yellow Myrobalan </a>
+			<div id="section3">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/v-d9_GOze84" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<a class="a" onclick="section('section4')"> Testimonials </a>
+			<div id="section4">
+				The excellent hypoglycaemic property of haritaki plays a significant role in alleviating the blood sugar levels of the body. The production of insulin from the β-pancreatic cells becomes active in taking this wonder fruit. It helps to reduce the breakdown of starch into glucose. Hence, regular usage of haritaki powder effectively brings down the blood glucose levels and relieves from various diabetic symptoms like frequent urination, excessive thirst, weight loss etc. Haritaki is a traditional remedy for improving gut health and treating a wide range of gastrointestinal disorders like esophagitis, heartburn, diarrhoea, flatulence, peptic ulcer, gastroesophageal reflux disease, indigestion, constipation, flatulence and stomach pain. The carminative nature of the fruit helps in breaking down the food particles in the stomach and intestine, enhances the secretion of the digestive juices and thereby increases the absorption of essential nutrients through the intestines. It helps to eliminate abdominal gas and in turn reduces abdominal distension.
+			</div>
+		</div>
+	</main>
+	<script>
+		var quantity = 1;
+		function add() {
+			if(quantity < 10) {
+				quantity+= 1;
+				_e("fq").innerHTML = quantity;
+				_e("qt").value = quantity;
+			}
+		}
+		function sub() {
+			if(quantity > 1) {
+				quantity-= 1;
+				_e("fq").innerHTML = quantity;
+				_e("qt").value = quantity;
+			}
+		}
+		function submitForm() { _e("addtocartbtn").submit(); }
+		function section(s) {
+			a = check(s);
+			_e(s).style.display = a;
+		}
+		function check(s2) {
+			if(_e(s2).style.display === "block") { return "none"; }
+			else { return "block"; }
+		}
+		function _e(id) { return document.getElementById(id); }
+		function logout() { Android.logout(); }
+	</script>
+</body>
+</html>
