@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Cart </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" >
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="canonical" href="/" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<style>
+		/* RESET STYLESHEET */
+		html,body,div,p,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,button,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,a,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;text-decoration:none;}
+		body{line-height:1;}
+		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+		nav ul, ul, li{list-style:none;}
+		img {pointer-events:none;}
+		blockquote,q{quotes:none;}
+		blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+		ins{background-color:#FF9;color:#111;text-decoration:none;}
+		mark{background-color:#FF9;color:#111;font-style:italic;font-weight:bold;}
+		del{text-decoration:line-through;}
+		abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}
+		table{border-collapse:collapse;border-spacing:0;}
+		hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
+		input,select{vertical-align:middle;}
+		/* MY CODE */
+		html { scroll-behavior: smooth; }
+		* { width: 100%; color: #ff7f58; outline: none; font-weight: 900; text-decoration: none; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+		body { user-select: none; background: #fff5ee; }
+		/* FIXED NAV BAR */
+		header {
+			top: 0;
+			z-index: 10;
+			position: sticky;
+			padding: 12px 0px;
+			background: #ff7f58;
+			border-bottom: 2px solid #ff440c;
+		}
+		.icon1, .hname, .icon2 {
+			color: #fff5ee;
+			font-size: 28px;
+			display: inline-block;
+		}
+		.icon1, .icon2 {
+			top: 0;
+			z-index: 10;
+			padding: 0px 10px;
+			position: absolute;
+			width: fit-content;
+		}
+		.icon1 { left: 0; }
+		.icon2 { right: 0; }
+		.hname {
+			position: relative;
+			text-align: center;
+		}
+		/* MAIN */
+		main { padding: 40px 20px; }
+		/* TABLE */
+		.table {
+			display: table;
+			padding-bottom: 20px;
+			border-bottom: 2px solid #ff440c;
+		}
+		.cart-row { width: 3000px; }
+		.cart-items { width: 7000px; }
+		.cart-row, .cart-items {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.cart-column {
+			height: 75px;
+			display: flex;
+			padding: 5px 0;
+			align-items: center;
+		}
+		.cart-total {
+			width: 100%;
+			font-size: 24px;
+			margin-top: 40px;
+			text-align: right;
+		}
+		.cart-total-price {
+			color: #ff440c;
+			margin-left: 20px;
+		}
+		.cart-item-image {
+			width: 75px;
+			height: auto;
+		}
+		.full {
+			width: 100%;
+			text-align: center;
+		}
+		.btn {
+			width: 75%;
+			padding: 10px;
+			color: #fff5ee;
+			font-size: 24px;
+			margin-top: 40px;
+			background: #ff440c;
+			border-radius: 40px;
+			box-shadow: 10px 10px 10px rgba(0,0,0,0.35);
+		}
+		.btn:hover { background: #ff7f58; }
+		/* ALL POPUPS */
+		.popup, .processing, .success {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: none;
+			text-align: center;
+			position: absolute;
+			align-items: center;
+			justify-content: center;
+			background: rgba(0, 0, 0, 0.3);
+		}
+		.popup-content, .processing div {
+			padding: 20px;
+			margin: 0 40px;
+			background: #FFF;
+			position: relative;
+			border-radius: 5px;
+			box-shadow: 0 0 20px #000;
+		}
+		.processing div { font-size: 20px; }
+		.popup-content input, #popupbtn, #closebtn {
+			width: 80%;
+			display: block;
+			font-size: 16px;
+			background: #FFF;
+			margin: 10px auto;
+			padding: 10px 20px;
+			border-radius: 50px;
+			border: 2px solid #ff440c;
+		}
+		.hidden-input { display: none; }
+		::placeholder { color: #ff440c; }
+		#popupbtn, #closebtn {
+			color: #fff5ee;
+			font-size: 20px;
+			background: #ff440c;
+		}
+		#popupbtn:hover, #closebtn:hover {
+			background: #ff7f58;
+			border: 2px solid #ff7f58;
+		}
+		#close {
+			top: -20px;
+			width: 40px;
+			right: -20px;
+			color: #fff5ee;
+			font-size: 40px;
+			border-radius: 50%;
+			position: absolute;
+			background: #ff440c;
+		}
+		#close:hover { background: #ff7f58; }
+		.success-popup {
+			top: 50%;
+			left: 50%;
+			position: absolute;
+			width: calc(100% - 80px);
+			box-shadow: 0 0 20px #000;
+			transform: translate(-50%,-50%);
+		}
+		.sp {
+			opacity: 0;
+			top: -200%;
+			padding: 20px;
+			display: block;
+			font-size: 20px;
+			background: #FFF;
+			line-height: 25px;
+			text-align: center;
+			border-radius: 5px;
+			transform: translate(-50%,-50%) scale(0.5);
+			transition: opacity 300ms ease-in-out, top 1000ms ease-in-out, transform 1000ms ease-in-out;
+		}
+		.sp.active {
+			top: 50%;
+			opacity: 1;
+			transform: translate(-50%,-50%) scale(1);
+			transition: transform 300ms cubic-bezier(0.10,0.09,0.43,1.19);
+			backdrop-filter: blur(5px);
+		}
+		.success-popup .icon {
+			width: 50px;
+			height: 50px;
+			color: #ff440c;
+			font-size: 30px;
+			margin-top: 5px;
+			line-height: 42px;
+			text-align: center;
+			border-radius: 50%;
+			display: inline-block;
+			border: 4px solid #ff440c;
+		}
+		.sp > div{
+			top: 10px;
+			opacity: 0;
+			position: relative;
+		}
+		.sp.active > div {
+			top: 0;
+			opacity: 1;
+		}
+		.sp.active .icon { transition: all 300ms ease-in-out 250ms; }
+		.sp.active #popuptext { padding: 20px 0 10px 0; }
+		.sp.active #popuptext { transition: all 300ms ease-in-out 300ms; }
+	</style>
+</head>
+<body>
+	<header>
+		<div class="hname"> GoLocal
+			<div class="icon1"> <a href="index.html"> <i class="fas fa-home"></i> </a> </div>
+			<div class="icon2"> <a onclick="logout()"> <i class="fa fa-user-circle"></i> </a> </div>
+		</div>
+	</header>
+	<main>
+		<section class="table">
+			<div class="cart-row">
+				<span class="cart-column cart-item"> Item : </span>
+				<span class="cart-column cart-price"> Price : </span>
+				<span class="cart-column cart-quantity"> Qty : </span>
+			</div>
+			<div class="cart-items"></div>
+		</section>
+		<div class="cart-total"> Total :
+			<span class="cart-total-price"> Rs.0 </span>
+		</div>
+		<div class="full"> <button class="btn btn-purchase" type="button" id="purchasebtn"> Purchase </button> </div>
+		<div class="popup">
+			<form name="submit-to-google-sheet" class="popup-content">
+				<div id="close"> × </div>
+				<input type="text" name="name" placeholder="UserName" id="username" required>
+				<input type="email" name="email" placeholder="E-mail" id="email" required>
+				<input type="tel" name="phone" placeholder="PhoneNumber" id="phone" required>
+				<input type="text" name="address" placeholder="Address" id="address" required>
+				<div class="hidden-input">
+					<input type="text" name="product" id="item-name">
+					<input type="text" name="price" id="item-price">
+					<input type="text" name="quantity" id="item-qty">
+					<input type="text" name="total" id="item-total">
+				</div>
+				<button id="popupbtn" type="submit"> Buy </button>
+			</form>
+		</div>
+		<div class="processing"> <div> Processing . . . Please Wait </div> </div>
+		<div class="success">
+			<div class="success-popup sp">
+				<div class="icon"> ✓ </div>
+				<div id="popuptext"> Thank you for purchasing <br> You'll receive an email shortly</div>
+				<a href="index.html" id="closebtn"> Close </a>
+			</div>
+		</div>
+	</main>
+	<script>
+		ready();
+		var params = "";
+		var quantity = "";
+		var price = "";
+		var title = "";
+		var items =[];
+		window.addEventListener('load', ()=>{
+			params = (new URL(document.location)).searchParams;
+			imageSrc = params.get("image");
+			title = params.get('productName');
+			quantity = params.get("quantity");
+			price = params.get("price");
+			addItemToCart(title, price, imageSrc, quantity);
+			updateCartTotal();
+		})
+		function ready() { document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked); }
+		function purchaseClicked() {
+			document.querySelector(".popup").style.display = "flex";
+			updateCartTotal();
+		}
+		function addItemToCart(title, price, imageSrc, quantity) {
+			var singleProduct = {};
+			singleProduct.image = imageSrc;
+			singleProduct.name = title;
+			singleProduct.quantity = quantity;
+			singleProduct.price = price;
+			items.push(singleProduct);
+			var cartRow = document.createElement('div');
+			cartRow.classList.add('cart-row');
+			var cartItems = document.getElementsByClassName('cart-items')[0];
+			var cartItemNames = cartItems.getElementsByClassName('cart-item-title');
+			for (var i = 0; i < cartItemNames.length; i++) {
+				if (cartItemNames[i].innerText == title) { 
+					alert('This item is already added to the cart');
+					return
+				}
+			}
+			var cartRowContents = `
+				<div class="cart-column cart-item">
+					<span class="cart-item-title"> ${title} </span>
+					<img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+				</div>
+				<span class="cart-column cart-price"> ${price} </span>
+				<div class="cart-column cart-quantity">
+					<span class="cart-quantity-input"> ${quantity} </span>
+				</div>`;
+			cartRow.innerHTML = cartRowContents;
+			cartItems.append(cartRow);
+		}
+		function updateCartTotal() {
+			var cartItemContainer = document.getElementsByClassName('cart-items')[0];
+			var cartRows = cartItemContainer.getElementsByClassName('cart-row');
+			var total = 0;
+			for (var i = 0; i < cartRows.length; i++) {
+				var cartRow = cartRows[i];
+				var priceElement = cartRow.getElementsByClassName('cart-price')[0];
+				var price = parseFloat(priceElement.innerText.replace('Rs.', ''));
+				total = total + (items[i]["price"] *items[i]["quantity"]);
+			}
+			document.getElementsByClassName('cart-total-price')[0].innerText = 'Rs.' + total;
+		}
+		document.getElementById("close").addEventListener('click',()=>{ document.querySelector(".popup").style.display = "none"; })
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbxbqRcCDef95bwnq_6ZswZs03I2XUb9gDYv8NNydiS6vQZ7yKE/exec';
+		const form = document.forms['submit-to-google-sheet'];
+		form.addEventListener('submit', e => {
+			var name = document.querySelector("#username").value;
+			var email = document.querySelector("#email").value;
+			var phone = document.querySelector("#phone").value;
+			var address = document.querySelector("#address").value;
+			var totals = document.getElementsByClassName('cart-total-price')[0].innerText;
+			Email.send({
+				Host : "smtp.gmail.com",
+				Username : "minispartans300@gmail.com",
+				Password : "zcyvkijcpwuxypbr",
+				To : `${email}`,
+				From : "minispartans300@gmail.com",
+				Subject : "GoLocal Order Confirmation",
+				Body : `<h3> Thank you for ordering from GoLocal <br><br> Your order summary is as follows: </h3> <h2> Product : ${title} <br> Price : ${price} <br> Quantity : ${quantity} </h2> <h1> Total : ${totals} </h1>`
+			}).then(email =>{
+				document.querySelector(".processing").style.display = "none";
+				document.querySelector(".success").style.display = "flex";
+				setTimeout(function() { document.getElementsByClassName("success-popup")[0].classList.add("active"); }, 300)
+			});
+			document.getElementById('item-name').value = title;
+			document.getElementById('item-price').value = price;
+			document.getElementById('item-qty').value = quantity;
+			document.getElementById('item-total').value = totals;
+			e.preventDefault()
+			fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+			.then(response => console.log('Success!', response))
+			.catch(error => console.error('Error!', error.message))
+			document.querySelector(".popup").style.display = "none";
+			document.querySelector(".processing").style.display = "flex";
+		})
+	</script>
+</body>
+</html>
